@@ -11,7 +11,7 @@ export const HowItWorks = () => {
             How CAFAR Works
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A revolutionary approach to marine stability and performance through innovative foil arm technology
+            An articulated arm system with symmetric T-foil for maximum stability and performance
           </p>
         </div>
         
@@ -25,11 +25,11 @@ export const HowItWorks = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">
-                      Pivoting Arm System
+                      Articulated Arm System
                     </h3>
                     <p className="text-muted-foreground">
-                      Main pivoting arm mounted on deck carries auxiliary hydrodynamic surfaces 
-                      that can be deployed on either side of the boat for maximum leverage.
+                      Main arm pivots around a longitudinal axis to swing between sides, while an auxiliary arm 
+                      provides additional angular adjustment for optimal foil positioning.
                     </p>
                   </div>
                 </div>
@@ -44,11 +44,11 @@ export const HowItWorks = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">
-                      Lateral Extension
+                      Symmetric T-Foil Deployment
                     </h3>
                     <p className="text-muted-foreground">
-                      The arm swings laterally, positioning foils or rotors far from the hull 
-                      to maximize stability and performance benefits.
+                      The T-foil deploys on windward or leeward side as needed, positioned far from the hull 
+                      to create maximum righting moment and hydrodynamic lift.
                     </p>
                   </div>
                 </div>
@@ -63,11 +63,11 @@ export const HowItWorks = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">
-                      Modular Design
+                      Dual Operating Modes
                     </h3>
                     <p className="text-muted-foreground">
-                      Supports various hydrodynamic surfaces including airfoils with flaps 
-                      or vertical rotors for energy recovery and propulsion.
+                      Sail Mode for conventional sailing with minimal immersion, and Fly Mode where 
+                      the foil actively generates lift to partially or fully unload the hull.
                     </p>
                   </div>
                 </div>
@@ -89,11 +89,11 @@ export const HowItWorks = () => {
         
         <div className="bg-gradient-ocean rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-primary-foreground mb-4">
-            Key Innovation
+            Retrofit-Ready Installation
           </h3>
           <p className="text-primary-foreground/90 text-lg max-w-4xl mx-auto">
-            Unlike fixed foils or conventional canting keels, CAFAR combines maximum lateral extension, 
-            dual-side deployment, and modular hydrodynamic surfaces in one lightweight, versatile system.
+            Bolt-on deck mounting system requires no hull modifications, making it a cost-effective 
+            performance upgrade for existing boats with manual or motorized operation options.
           </p>
         </div>
       </div>

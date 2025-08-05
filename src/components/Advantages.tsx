@@ -5,26 +5,26 @@ export const Advantages = () => {
   const advantages = [
     {
       icon: TrendingUp,
-      title: "Enhanced Performance",
-      description: "Increases righting moment and lift while reducing drag, resulting in significantly improved speed and stability.",
+      title: "Greater Righting Moment",
+      description: "Achieves wide effective beam without increasing hull width, boosting stability and speed through maximum leverage positioning.",
       gradient: "bg-gradient-primary"
     },
     {
       icon: Cog,
-      title: "Adaptive Technology",
-      description: "Supports multiple configurations including airfoils with flaps or vertical rotors for energy recovery and propulsion.",
+      title: "Retrofit-Friendly",
+      description: "No hull penetration required - bolt-on deck mounting makes it a cost-effective performance upgrade for existing boats.",
       gradient: "bg-gradient-ocean"
     },
     {
       icon: Zap,
-      title: "Flexible Operation",
-      description: "Can be operated manually or with motorized systems, ensuring adaptability to different vessel requirements.",
+      title: "Safety Advantage",
+      description: "Reduced structural vulnerability compared to hull-integrated foils, with safer collision characteristics and easier maintenance access.",
       gradient: "bg-accent"
     },
     {
       icon: Gauge,
-      title: "Maximum Leverage",
-      description: "Far lateral positioning of hydrodynamic surfaces maximizes leverage and stability benefits over traditional systems.",
+      title: "Performance Gains Across Conditions",
+      description: "Improves upwind, reaching, and downwind performance as demonstrated in VPP simulations, with benefits in all sailing modes.",
       gradient: "bg-primary"
     }
   ];
