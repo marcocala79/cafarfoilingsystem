@@ -80,21 +80,9 @@ export const Contatti = () => {
             </h3>
             
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-accent/20 p-3 rounded-lg">
-                  <Mail className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-primary-foreground mb-1">Email</h4>
-                  <a 
-                    href="mailto:CAFAR@gmail.com" 
-                    className="text-primary-foreground/80 hover:text-accent transition-colors"
-                  >
-                    CAFAR@gmail.com
-                  </a>
-                </div>
-              </div>
-              
+              <p className="text-primary-foreground/80">
+                Fill out the form and we'll get back to you at the email you provide.
+              </p>
             </div>
             
             <div className="mt-12 p-6 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10">
