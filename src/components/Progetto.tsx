@@ -6,38 +6,38 @@ export const Progetto = () => {
   const features = [
     {
       icon: TrendingUp,
-      title: "Maggiore Momento Raddrizzante",
-      description: "Aumenta il braccio del foil senza modificare la larghezza massima dello scafo.",
+      title: "Greater Righting Moment",
+      description: "Increases the foil arm without modifying the maximum hull width.",
     },
     {
       icon: Wrench,
-      title: "Facile Retrofit",
-      description: "Sistema rimovibile, installabile su barche esistenti senza modifiche strutturali permanenti.",
+      title: "Easy Retrofit",
+      description: "Removable system, installable on existing boats without permanent structural modifications.",
     },
     {
       icon: Shield,
-      title: "Massima Sicurezza",
-      description: "Nessun foro nello scafo e maggiore sicurezza in caso di collisione.",
+      title: "Maximum Safety",
+      description: "No holes in the hull and greater safety in case of collision.",
     },
     {
       icon: Award,
-      title: "Design Brevettato",
-      description: "Tecnologia innovativa protetta da brevetto internazionale.",
+      title: "Patented Design",
+      description: "Innovative technology protected by international patent.",
     },
   ];
 
   return (
-    <section id="progetto" className="py-20 bg-background">
+    <section id="project" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-accent font-medium mb-2">Il Progetto</p>
+          <p className="text-accent font-medium mb-2">The Project</p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Innovazione nel Foiling
+            Innovation in Foiling
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            CAFAR è un sistema rivoluzionario che permette a un monofoil di aumentare 
-            il braccio di leva del foil grazie a un braccio articolato basculante, 
-            garantendo prestazioni superiori mantenendo la semplicità costruttiva.
+            CAFAR is a revolutionary system that allows a monofoil to increase 
+            the foil lever arm through an articulated canting arm, 
+            delivering superior performance while maintaining construction simplicity.
           </p>
         </div>
         
@@ -45,7 +45,7 @@ export const Progetto = () => {
           <div className="relative">
             <img 
               src={cafarBoat} 
-              alt="CAFAR System - Vista 3D" 
+              alt="CAFAR System - 3D View" 
               className="w-full rounded-lg"
             />
           </div>

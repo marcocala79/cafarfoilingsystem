@@ -9,10 +9,10 @@ import { useToast } from "@/hooks/use-toast";
 export const Contatti = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    nome: "",
+    name: "",
     email: "",
-    azienda: "",
-    messaggio: "",
+    company: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -24,11 +24,11 @@ export const Contatti = () => {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
-      title: "Messaggio inviato!",
-      description: "Ti risponderemo il prima possibile.",
+      title: "Message sent!",
+      description: "We'll get back to you as soon as possible.",
     });
     
-    setFormData({ nome: "", email: "", azienda: "", messaggio: "" });
+    setFormData({ name: "", email: "", company: "", message: "" });
     setIsSubmitting(false);
   };
 
@@ -40,16 +40,16 @@ export const Contatti = () => {
   };
 
   return (
-    <section id="contatti" className="py-20 bg-primary">
+    <section id="contact" className="py-20 bg-primary">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-accent font-medium mb-2">Contatti</p>
+          <p className="text-accent font-medium mb-2">Contact</p>
           <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-            Parliamo del Futuro
+            Let's Talk About the Future
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-            Sei interessato a esplorare le possibilità del sistema CAFAR? 
-            Contattaci per discutere opportunità di collaborazione e licensing.
+            Interested in exploring the possibilities of the CAFAR system? 
+            Contact us to discuss collaboration and licensing opportunities.
           </p>
         </div>
         
@@ -57,7 +57,7 @@ export const Contatti = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-2xl font-bold text-primary-foreground mb-8">
-              Informazioni di Contatto
+              Contact Information
             </h3>
             
             <div className="space-y-6">
@@ -81,17 +81,17 @@ export const Contatti = () => {
                   <MapPin className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-primary-foreground mb-1">Sede</h4>
-                  <p className="text-primary-foreground/80">Palermo, Italia</p>
+                  <h4 className="text-lg font-semibold text-primary-foreground mb-1">Location</h4>
+                  <p className="text-primary-foreground/80">Palermo, Italy</p>
                 </div>
               </div>
             </div>
             
             <div className="mt-12 p-6 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10">
               <p className="text-primary-foreground/80">
-                <span className="font-semibold text-primary-foreground">Brevetto</span>
+                <span className="font-semibold text-primary-foreground">Patent</span>
                 <br />
-                N. 102021000023279
+                No. 102021000023279
               </p>
             </div>
           </div>
@@ -101,17 +101,17 @@ export const Contatti = () => {
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="nome" className="block text-sm font-medium text-primary-foreground mb-2">
-                    Nome *
+                  <label htmlFor="name" className="block text-sm font-medium text-primary-foreground mb-2">
+                    Name *
                   </label>
                   <Input
-                    id="nome"
-                    name="nome"
-                    value={formData.nome}
+                    id="name"
+                    name="name"
+                    value={formData.name}
                     onChange={handleChange}
                     required
                     className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-                    placeholder="Il tuo nome"
+                    placeholder="Your name"
                   />
                 </div>
                 
@@ -127,37 +127,37 @@ export const Contatti = () => {
                     onChange={handleChange}
                     required
                     className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-                    placeholder="La tua email"
+                    placeholder="Your email"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="azienda" className="block text-sm font-medium text-primary-foreground mb-2">
-                    Azienda / Organizzazione
+                  <label htmlFor="company" className="block text-sm font-medium text-primary-foreground mb-2">
+                    Company / Organization
                   </label>
                   <Input
-                    id="azienda"
-                    name="azienda"
-                    value={formData.azienda}
+                    id="company"
+                    name="company"
+                    value={formData.company}
                     onChange={handleChange}
                     className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-                    placeholder="La tua azienda (opzionale)"
+                    placeholder="Your company (optional)"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="messaggio" className="block text-sm font-medium text-primary-foreground mb-2">
-                    Messaggio *
+                  <label htmlFor="message" className="block text-sm font-medium text-primary-foreground mb-2">
+                    Message *
                   </label>
                   <Textarea
-                    id="messaggio"
-                    name="messaggio"
-                    value={formData.messaggio}
+                    id="message"
+                    name="message"
+                    value={formData.message}
                     onChange={handleChange}
                     required
                     rows={4}
                     className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 resize-none"
-                    placeholder="Come possiamo aiutarti?"
+                    placeholder="How can we help you?"
                   />
                 </div>
                 
@@ -167,11 +167,11 @@ export const Contatti = () => {
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                 >
                   {isSubmitting ? (
-                    "Invio in corso..."
+                    "Sending..."
                   ) : (
                     <>
                       <Send className="mr-2 h-4 w-4" />
-                      Invia Messaggio
+                      Send Message
                     </>
                   )}
                 </Button>

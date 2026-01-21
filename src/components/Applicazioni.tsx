@@ -6,40 +6,40 @@ export const Applicazioni = () => {
     {
       icon: Trophy,
       category: "Performance",
-      title: "Regate Oceaniche",
-      description: "Ideale per competizioni come la Mini-Transat, dove prestazioni e affidabilità sono fondamentali.",
+      title: "Ocean Racing",
+      description: "Ideal for competitions like the Mini-Transat, where performance and reliability are essential.",
     },
     {
       icon: Anchor,
-      category: "Versatilità",
-      title: "Yacht da Crociera",
-      description: "Retrofit su yacht esistenti per migliorare comfort e velocità senza modifiche strutturali invasive.",
+      category: "Versatility",
+      title: "Cruising Yachts",
+      description: "Retrofit on existing yachts to improve comfort and speed without invasive structural modifications.",
     },
     {
       icon: Factory,
-      category: "Scalabilità",
-      title: "Produzione in Serie",
-      description: "Sistema standardizzato adatto alla produzione industriale per diverse classi di imbarcazioni.",
+      category: "Scalability",
+      title: "Series Production",
+      description: "Standardized system suitable for industrial production across different boat classes.",
     },
     {
       icon: Lightbulb,
-      category: "Innovazione",
-      title: "Prototipi e R&D",
-      description: "Piattaforma ideale per la sperimentazione e lo sviluppo di nuove tecnologie nel foiling.",
+      category: "Innovation",
+      title: "Prototypes & R&D",
+      description: "Ideal platform for experimentation and development of new foiling technologies.",
     },
   ];
 
   return (
-    <section id="applicazioni" className="py-20 bg-muted/30">
+    <section id="applications" className="py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-accent font-medium mb-2">Applicazioni</p>
+          <p className="text-accent font-medium mb-2">Applications</p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Dove Utilizzare CAFAR
+            Where to Use CAFAR
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            La versatilità del sistema CAFAR lo rende adatto a molteplici 
-            applicazioni nel mondo della vela e dell'industria nautica.
+            The versatility of the CAFAR system makes it suitable for multiple 
+            applications in the sailing and marine industry.
           </p>
         </div>
         
@@ -65,7 +65,7 @@ export const Applicazioni = () => {
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
             <div className="text-4xl font-bold text-accent mb-2">+15%</div>
-            <div className="text-muted-foreground">Velocità VMG</div>
+            <div className="text-muted-foreground">VMG Speed</div>
           </div>
           <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
             <div className="text-4xl font-bold text-primary mb-2">6.5m</div>
@@ -73,7 +73,7 @@ export const Applicazioni = () => {
           </div>
           <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
             <div className="text-4xl font-bold text-primary-glow mb-2">VPP</div>
-            <div className="text-muted-foreground">Simulazioni Validate</div>
+            <div className="text-muted-foreground">Validated Simulations</div>
           </div>
         </div>
       </div>
