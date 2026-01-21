@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -95,15 +95,6 @@ export const Contatti = () => {
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="bg-accent/20 p-3 rounded-lg">
-                  <MapPin className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-primary-foreground mb-1">Location</h4>
-                  <p className="text-primary-foreground/80">Palermo, Italy</p>
-                </div>
-              </div>
             </div>
             
             <div className="mt-12 p-6 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10">
