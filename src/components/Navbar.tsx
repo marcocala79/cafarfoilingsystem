@@ -21,11 +21,11 @@ export const Navbar = () => {
   };
 
   const navItems = [
-    { label: "Il Progetto", id: "progetto" },
-    { label: "Come Funziona", id: "come-funziona" },
-    { label: "Inventori", id: "inventori" },
-    { label: "Applicazioni", id: "applicazioni" },
-    { label: "Contatti", id: "contatti" },
+    { label: "The Project", id: "project" },
+    { label: "How It Works", id: "how-it-works" },
+    { label: "Inventors", id: "inventors" },
+    { label: "Applications", id: "applications" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (
@@ -64,10 +64,10 @@ export const Navbar = () => {
             <Button
               variant="outline"
               size="sm"
-              onClick={() => scrollToSection("contatti")}
+              onClick={() => scrollToSection("contact")}
               className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
             >
-              Contattaci
+              Contact Us
             </Button>
           </div>
 
@@ -100,10 +100,10 @@ export const Navbar = () => {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => scrollToSection("contatti")}
+                onClick={() => scrollToSection("contact")}
                 className="w-full bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
               >
-                Contattaci
+                Contact Us
               </Button>
             </div>
           </div>

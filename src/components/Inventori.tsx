@@ -4,27 +4,27 @@ export const Inventori = () => {
   const inventors = [
     {
       name: "Francesco Belvisi",
-      role: "Inventore e Co-titolare del Brevetto",
-      description: "Progettista navale con una passione per la vela e l'innovazione a 360°. Ideatore del concetto CAFAR e promotore dello sviluppo tecnologico.",
+      role: "Inventor and Patent Co-holder",
+      description: "Naval designer with a passion for sailing and 360° innovation. Creator of the CAFAR concept and promoter of technological development.",
     },
     {
       name: "Marco Calatroni",
-      role: "Co-inventore e Co-titolare del Brevetto",
-      description: "Esperto di project management e relazioni industriali e commerciali. Partner fondamentale nello sviluppo e perfezionamento del sistema CAFAR.",
+      role: "Co-inventor and Patent Co-holder",
+      description: "Expert in project management and industrial and commercial relations. Key partner in the development and refinement of the CAFAR system.",
     },
   ];
 
   return (
-    <section id="inventori" className="py-20 bg-background">
+    <section id="inventors" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-accent font-medium mb-2">Gli Inventori</p>
+          <p className="text-accent font-medium mb-2">The Inventors</p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Le Menti Dietro CAFAR
+            The Minds Behind CAFAR
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Un progetto nato dalla passione per la vela e dalla volontà di 
-            portare l'innovazione nel mondo del foiling.
+            A project born from a passion for sailing and the desire to 
+            bring innovation to the world of foiling.
           </p>
         </div>
         

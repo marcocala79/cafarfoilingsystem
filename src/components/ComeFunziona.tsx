@@ -6,35 +6,35 @@ export const ComeFunziona = () => {
   const steps = [
     {
       number: "01",
-      title: "Due Elementi Principali",
-      description: "Il sistema CAFAR si basa su due componenti: il braccio basculante (canting arm) e il T-foil simmetrico basculante. Questa combinazione permette di ottenere prestazioni superiori.",
+      title: "Two Main Components",
+      description: "The CAFAR system is based on two components: the canting arm and the symmetric canting T-foil. This combination delivers superior performance.",
       image: cafarElements,
     },
     {
       number: "02",
-      title: "Condizioni Operative",
-      description: "Il sistema si adatta automaticamente alle condizioni di vento: navigazione con vento leggero, poppa, bolina. Il braccio si estende lateralmente per massimizzare il momento raddrizzante.",
+      title: "Operating Conditions",
+      description: "The system automatically adapts to wind conditions: light wind sailing, downwind, upwind. The arm extends laterally to maximize the righting moment.",
       image: cafarConditions,
     },
     {
       number: "03",
-      title: "Modalità Volo e Navigazione",
-      description: "Il passaggio tra FLY mode (in foiling) e SAIL mode (navigazione tradizionale) avviene in modo fluido durante le virate, garantendo stabilità e performance in ogni situazione.",
+      title: "Fly and Sail Modes",
+      description: "The transition between FLY mode (foiling) and SAIL mode (traditional sailing) occurs smoothly during tacks, ensuring stability and performance in every situation.",
       image: cafarFlymode,
     },
   ];
 
   return (
-    <section id="come-funziona" className="py-20 bg-muted/30">
+    <section id="how-it-works" className="py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-accent font-medium mb-2">Come Funziona</p>
+          <p className="text-accent font-medium mb-2">How It Works</p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Tecnologia in Azione
+            Technology in Action
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Scopri come il sistema CAFAR trasforma la navigazione a vela, 
-            combinando ingegneria avanzata e design intelligente.
+            Discover how the CAFAR system transforms sailing, 
+            combining advanced engineering and intelligent design.
           </p>
         </div>
         
