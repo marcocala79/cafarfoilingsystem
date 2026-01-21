@@ -1,20 +1,26 @@
+import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { HowItWorks } from "@/components/HowItWorks";
+import { Progetto } from "@/components/Progetto";
+import { ComeFunziona } from "@/components/ComeFunziona";
 import { Physics } from "@/components/Physics";
 import { VppResults } from "@/components/VppResults";
-import { Advantages } from "@/components/Advantages";
-import { Innovation } from "@/components/Innovation";
+import { Inventori } from "@/components/Inventori";
+import { Applicazioni } from "@/components/Applicazioni";
+import { Contatti } from "@/components/Contatti";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Navbar />
       <Hero />
-      <HowItWorks />
+      <Progetto />
+      <ComeFunziona />
       <Physics />
       <VppResults />
-      <Advantages />
-      <Innovation />
+      <Inventori />
+      <Applicazioni />
+      <Contatti />
       <Footer />
     </div>
   );
