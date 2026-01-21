@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,8 +60,9 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Button & Theme Toggle */}
+          <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
             <Button
               variant="outline"
               size="sm"
@@ -72,16 +74,19 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-primary-foreground p-2"
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-primary-foreground p-2"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
