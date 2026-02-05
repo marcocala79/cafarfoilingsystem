@@ -76,7 +76,7 @@ const claims: ClaimGroup[] = [
       { sector: "High-end performance cruiser", stars: 4 },
       { sector: "Research & experimentation", stars: 5 },
     ],
-    insight: "Always license this claim: it's the heart of the patent.",
+    insight: "Heart of the patent — always license.",
   },
   {
     id: "claim-2",
@@ -98,7 +98,7 @@ const claims: ClaimGroup[] = [
       { sector: "Prefabricated kit systems", stars: 4 },
       { sector: "Modular experimental projects", stars: 5 },
     ],
-    insight: "Very strong claim for industrialization (kits, subsystems).",
+    insight: "Industrialization (kits, subsystems).",
   },
   {
     id: "claim-3",
@@ -118,7 +118,7 @@ const claims: ClaimGroup[] = [
       { sector: "Sport multihulls", stars: 4 },
       { sector: "Simplified one-off", stars: 4 },
     ],
-    insight: "Very useful claim for reliability and simplicity.",
+    insight: "Reliability and simplicity.",
   },
   {
     id: "claim-4",
@@ -138,8 +138,7 @@ const claims: ClaimGroup[] = [
       { sector: "High-speed prototypes", stars: 4 },
       { sector: "Fluid dynamics research", stars: 5 },
     ],
-    insight:
-      "R&D-oriented claim, high IP value even if not mainstream.",
+    insight: "High IP value, R&D-oriented.",
   },
   {
     id: "claim-5",
@@ -159,7 +158,7 @@ const claims: ClaimGroup[] = [
       { sector: "Advanced mechatronic projects", stars: 4 },
       { sector: "Semi-autonomous boats", stars: 4 },
     ],
-    insight: "More complexity → targets high-budget / high-expertise.",
+    insight: "High-budget / high-expertise target.",
   },
   {
     id: "claim-6",
@@ -180,8 +179,7 @@ const claims: ClaimGroup[] = [
       { sector: "Visionary / concept projects", stars: 4 },
       { sector: "Non-sport applications", stars: 4 },
     ],
-    insight:
-      'Frontier claim, excellent as "fence IP" (blocks third parties).',
+    insight: "Fence IP — blocks third parties.",
   },
   {
     id: "claim-7",
@@ -202,7 +200,7 @@ const claims: ClaimGroup[] = [
       { sector: "Large / heavy boats", stars: 4 },
       { sector: "Industrialization", stars: 5 },
     ],
-    insight: "Fundamental claim for serious shipyards.",
+    insight: "Serious shipyards.",
   },
   {
     id: "claim-8-9",
@@ -217,7 +215,7 @@ const claims: ClaimGroup[] = [
       "No loopholes for alternative designs",
     ],
     applications: [{ sector: "All markets", stars: 5 }],
-    insight: "Defensive claim, but extremely important.",
+    insight: "Defensive, extremely important.",
   },
   {
     id: "claim-10-12",
@@ -238,7 +236,7 @@ const claims: ClaimGroup[] = [
       { sector: "Integrated systems", stars: 4 },
       { sector: "Partial autonomy", stars: 4 },
     ],
-    insight: "Key for automation and error-proof design.",
+    insight: "Automation and error-proof design.",
   },
   {
     id: "claim-13",
@@ -258,7 +256,7 @@ const claims: ClaimGroup[] = [
       { sector: "Traditional shipyards", stars: 5 },
       { sector: "Retrofit", stars: 4 },
     ],
-    insight: "Bridges theory and real-world sailing practice.",
+    insight: "Theory meets real-world sailing.",
   },
   {
     id: "claim-14-15",
@@ -278,7 +276,7 @@ const claims: ClaimGroup[] = [
       { sector: "Advanced prototypes", stars: 5 },
       { sector: "Records / R&D", stars: 5 },
     ],
-    insight: "Opens the door to next-generation foiling architectures.",
+    insight: "Next-generation foiling architectures.",
   },
 ];
 
