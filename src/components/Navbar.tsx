@@ -26,6 +26,7 @@ export const Navbar = () => {
     { label: "How It Works", id: "how-it-works" },
     { label: "Inventors", id: "inventors" },
     { label: "Applications", id: "applications" },
+    { label: "Patent", id: "patent" },
     { label: "Contact", id: "contact" },
   ];
 
