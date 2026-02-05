@@ -64,7 +64,7 @@ export const Contatti = () => {
         <div className="text-center mb-16">
           <p className="text-accent font-medium mb-2">Contact</p>
           <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-            Let's Talk About the Future
+            Let's talk about the future
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
             Interested in exploring the possibilities of the CAFAR system? 
