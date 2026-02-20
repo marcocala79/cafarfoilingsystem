@@ -32,11 +32,6 @@ export const Footer = () => {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('inventors')} className="hover:text-background transition-colors">
-                  Inventors
-                </button>
-              </li>
-              <li>
                 <button onClick={() => scrollToSection('applications')} className="hover:text-background transition-colors">
                   Applications
                 </button>
@@ -44,13 +39,6 @@ export const Footer = () => {
             </ul>
           </div>
           
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Inventors</h4>
-            <ul className="space-y-2 text-background/70">
-              <li>Francesco Belvisi</li>
-              <li>Marco Calatroni</li>
-            </ul>
-          </div>
         </div>
         
         <div className="border-t border-background/20 pt-8 text-center text-background/50">
