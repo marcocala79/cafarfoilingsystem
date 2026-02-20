@@ -22,16 +22,27 @@ export const Contatti = () => {
     setIsSubmitting(true);
     
     try {
+      const trimmedData = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        company: formData.company.trim() || null,
+        message: formData.message.trim(),
+      };
+
       const { error } = await supabase
         .from("contact_submissions")
-        .insert({
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          company: formData.company.trim() || null,
-          message: formData.message.trim(),
-        });
+        .insert(trimmedData);
 
       if (error) throw error;
+
+      // Send email notification
+      const { error: emailError } = await supabase.functions.invoke("send-contact-email", {
+        body: trimmedData,
+      });
+
+      if (emailError) {
+        console.error("Email sending failed:", emailError);
+      }
 
       toast({
         title: "Message sent!",
