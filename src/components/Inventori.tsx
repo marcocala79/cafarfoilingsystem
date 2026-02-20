@@ -9,7 +9,7 @@ export const Inventori = () => {
     },
     {
       name: "Marco Calatroni",
-      role: "Co-inventor and Patent Co-holder",
+      role: "Patent Co-holder and strategic backer",
       description: "Expert in project management and industrial and commercial relations. Key partner in the development and refinement of the CAFAR system.",
     },
   ];
