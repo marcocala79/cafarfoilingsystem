@@ -24,7 +24,7 @@ export const Navbar = () => {
   const navItems = [
     { label: "The Project", id: "project" },
     { label: "How It Works", id: "how-it-works" },
-    { label: "Inventors", id: "inventors" },
+    
     { label: "Applications", id: "applications" },
     { label: "Patent", id: "patent" },
     { label: "Contact", id: "contact" },
