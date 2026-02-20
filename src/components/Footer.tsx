@@ -50,9 +50,6 @@ export const Footer = () => {
               <li>Francesco Belvisi</li>
               <li>Marco Calatroni</li>
             </ul>
-            <p className="text-background/50 text-sm mt-4">
-              Palermo, Italy
-            </p>
           </div>
         </div>
         
