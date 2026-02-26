@@ -39,7 +39,7 @@ export const Applicazioni = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Where to Use CAFAR
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               The versatility of the CAFAR system makes it suitable for multiple 
               applications in the sailing and marine industry.
             </p>

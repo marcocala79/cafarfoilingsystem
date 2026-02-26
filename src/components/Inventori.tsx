@@ -22,7 +22,7 @@ export const Inventori = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             The Minds Behind CAFAR
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             A project born from a passion for sailing and the desire to 
             bring innovation to the world of foiling.
           </p>

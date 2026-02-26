@@ -32,7 +32,7 @@ export const Partnership = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Let's Build the Future of Foiling.
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
               We're looking for bold partners — shipyards, teams, investors, and innovators — ready to push sailing forward.
             </p>
           </div>

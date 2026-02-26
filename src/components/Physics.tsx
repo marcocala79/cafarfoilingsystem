@@ -12,7 +12,7 @@ export const Physics = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Physics Principles
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               Understanding the fundamental physics behind CAFAR's stability enhancement
             </p>
           </div>

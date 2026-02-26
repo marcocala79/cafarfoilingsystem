@@ -10,7 +10,7 @@ export const VppResults = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               VPP Simulation Results
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               Boat speed comparison with and without CAFAR system based on validated VPP simulations
             </p>
           </div>
