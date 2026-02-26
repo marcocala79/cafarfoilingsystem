@@ -22,7 +22,7 @@ export const Partnership = () => {
   ];
 
   return (
-    <section id="partnership" className="py-20 bg-background/80 backdrop-blur-sm relative overflow-hidden">
+    <section id="partnership" className="py-20 bg-background/60 backdrop-blur-sm relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-accent rounded-full" />
 
       <div className="max-w-5xl mx-auto px-6">
