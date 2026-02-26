@@ -49,7 +49,7 @@ export const Applicazioni = () => {
         <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
           {applications.map((app, index) => (
             <StaggerItem key={index}>
-              <Card className="shadow-elegant hover:shadow-glow transition-all duration-300 group h-full">
+              <Card className="bg-card/35 shadow-elegant hover:shadow-glow transition-all duration-300 group h-full">
                 <CardContent className="p-6 text-center">
                   <div className="bg-accent/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-accent/20 transition-colors flex items-center justify-center">
                     <app.icon className="h-8 w-8 text-accent" />
@@ -69,19 +69,19 @@ export const Applicazioni = () => {
         
         <StaggerContainer className="grid md:grid-cols-3 gap-8 mt-16" staggerDelay={0.1}>
           <StaggerItem>
-            <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
+            <div className="bg-card/35 p-8 rounded-lg shadow-elegant text-center">
               <div className="text-4xl font-bold text-accent mb-2">+15%</div>
               <div className="text-muted-foreground">VMG Speed</div>
             </div>
           </StaggerItem>
           <StaggerItem>
-            <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
+            <div className="bg-card/35 p-8 rounded-lg shadow-elegant text-center">
               <div className="text-4xl font-bold text-primary mb-2">6.5m</div>
               <div className="text-muted-foreground">Mini 650</div>
             </div>
           </StaggerItem>
           <StaggerItem>
-            <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
+            <div className="bg-card/35 p-8 rounded-lg shadow-elegant text-center">
               <div className="text-4xl font-bold text-primary-glow mb-2">VPP</div>
               <div className="text-muted-foreground">Validated Simulations</div>
             </div>
