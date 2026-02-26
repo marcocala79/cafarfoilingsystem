@@ -30,7 +30,7 @@ export const Applicazioni = () => {
   ];
 
   return (
-    <section id="applications" className="py-20 bg-muted/30">
+    <section id="applications" className="py-20 bg-muted/20 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-accent font-medium mb-2">Applications</p>

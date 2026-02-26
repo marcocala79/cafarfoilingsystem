@@ -315,7 +315,7 @@ const strategicPackages = [
 
 export const PatentClaims = () => {
   return (
-    <section id="patent" className="py-20 bg-background">
+    <section id="patent" className="py-20 bg-background/80 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

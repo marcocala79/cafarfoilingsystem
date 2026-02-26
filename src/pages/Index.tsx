@@ -10,22 +10,38 @@ import { PatentClaims } from "@/components/PatentClaims";
 import { Partnership } from "@/components/Partnership";
 import { Contatti } from "@/components/Contatti";
 import { Footer } from "@/components/Footer";
+import oceanBg from "@/assets/hero-ocean-tech.jpg";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <Progetto />
-      <ComeFunziona />
-      <Physics />
-      <VppResults />
+    <div className="min-h-screen relative">
+      {/* Fixed ocean background for all sections */}
+      <div 
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: `url(${oceanBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/85" />
+      </div>
       
-      <Applicazioni />
-      <PatentClaims />
-      <Partnership />
-      <Contatti />
-      <Footer />
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <Progetto />
+        <ComeFunziona />
+        <Physics />
+        <VppResults />
+        
+        <Applicazioni />
+        <PatentClaims />
+        <Partnership />
+        <Contatti />
+        <Footer />
+      </div>
     </div>
   );
 };

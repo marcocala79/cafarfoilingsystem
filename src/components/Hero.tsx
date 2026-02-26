@@ -11,13 +11,14 @@ export const Hero = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" style={{ transform: 'translateZ(-1px) scale(1.5)' }}>
         <img 
           src={heroImage} 
           alt="CAFAR System" 
           className="w-full h-full object-cover"
+          style={{ willChange: 'transform' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/75 to-primary/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/85"></div>
       </div>
       
       {/* Content */}

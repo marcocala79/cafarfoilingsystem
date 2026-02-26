@@ -70,7 +70,7 @@ export const Contatti = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-primary">
+    <section id="contact" className="py-20 bg-primary/90 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-accent font-medium mb-2">Contact</p>
