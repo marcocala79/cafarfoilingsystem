@@ -19,8 +19,8 @@ export const ComeFunziona = () => {
     },
     {
       number: "03",
-      title: "Fly and Sail Modes",
-      description: "The transition between FLY mode (foiling) and SAIL mode (traditional sailing) occurs smoothly during tacks, ensuring stability and performance in every situation.",
+      title: "Flight and Sail Modes",
+      description: "The transition between FLIGHT mode (foiling) and SAIL mode (traditional sailing) occurs smoothly during tacks, ensuring stability and performance in every situation.",
       image: cafarFlymode,
     },
   ];
