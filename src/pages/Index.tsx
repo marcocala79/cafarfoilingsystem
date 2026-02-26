@@ -7,6 +7,7 @@ import { VppResults } from "@/components/VppResults";
 
 import { Applicazioni } from "@/components/Applicazioni";
 import { PatentClaims } from "@/components/PatentClaims";
+import { Partnership } from "@/components/Partnership";
 import { Contatti } from "@/components/Contatti";
 import { Footer } from "@/components/Footer";
 
@@ -22,6 +23,7 @@ const Index = () => {
       
       <Applicazioni />
       <PatentClaims />
+      <Partnership />
       <Contatti />
       <Footer />
     </div>
