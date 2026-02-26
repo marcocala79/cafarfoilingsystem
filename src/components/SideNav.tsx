@@ -52,10 +52,10 @@ export const SideNav = () => {
           >
             {/* Label - appears on hover */}
             <span
-              className={`text-[10px] uppercase tracking-[0.2em] font-mono transition-all duration-300 ${
+              className={`text-[10px] uppercase tracking-[0.2em] font-mono px-2 py-1 rounded backdrop-blur-md transition-all duration-300 ${
                 isActive
-                  ? "opacity-100 text-primary-foreground"
-                  : "opacity-0 group-hover:opacity-70 text-foreground/60"
+                  ? "opacity-100 text-primary-foreground bg-primary/70"
+                  : "opacity-0 group-hover:opacity-100 text-foreground bg-background/60"
               }`}
               style={{ fontFamily: "'Orbitron', monospace" }}
             >
