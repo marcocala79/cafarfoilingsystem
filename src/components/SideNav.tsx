@@ -14,6 +14,7 @@ const sections = [
 
 export const SideNav = () => {
   const [activeSection, setActiveSection] = useState("hero");
+  const [showLabel, setShowLabel] = useState(true);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,6 +22,7 @@ export const SideNav = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
+            setShowLabel(true);
           }
         });
       },
@@ -34,6 +36,11 @@ export const SideNav = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowLabel(false), 3000);
+    return () => clearTimeout(timer);
+  }, [activeSection]);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -52,10 +59,12 @@ export const SideNav = () => {
           >
             {/* Label - appears on hover */}
             <span
-              className={`text-[10px] uppercase tracking-[0.2em] font-mono px-2 py-1 rounded backdrop-blur-md transition-all duration-300 ${
-                isActive
+              className={`text-[10px] uppercase tracking-[0.2em] font-mono px-2 py-1 rounded backdrop-blur-md transition-all duration-500 ${
+                isActive && showLabel
                   ? "opacity-100 text-primary-foreground bg-primary/70"
-                  : "opacity-0 group-hover:opacity-100 text-foreground bg-background/60"
+                  : isActive && !showLabel
+                    ? "opacity-0 text-primary-foreground bg-primary/70"
+                    : "opacity-0 group-hover:opacity-100 text-foreground bg-background/60"
               }`}
               style={{ fontFamily: "'Orbitron', monospace" }}
             >
