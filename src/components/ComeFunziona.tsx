@@ -26,7 +26,7 @@ export const ComeFunziona = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-background/50 backdrop-blur-sm">
+    <section id="how-it-works" className="py-20 bg-background/35 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">

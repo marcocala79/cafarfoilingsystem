@@ -28,7 +28,7 @@ export const Progetto = () => {
   ];
 
   return (
-    <section id="project" className="py-20 bg-background/60 backdrop-blur-sm">
+    <section id="project" className="py-20 bg-background/40 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
