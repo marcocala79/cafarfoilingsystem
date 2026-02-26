@@ -47,18 +47,20 @@ export const Progetto = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left">
             <div className="relative">
-              <img 
-                src={cafarBoat} 
-                alt="CAFAR System - 3D View" 
-                className="w-full rounded-lg"
-              />
+              <div className="bg-card/35 rounded-lg p-2">
+                <img 
+                  src={cafarBoat} 
+                  alt="CAFAR System - 3D View" 
+                  className="w-full rounded-lg"
+                />
+              </div>
             </div>
           </ScrollReveal>
           
           <StaggerContainer className="grid sm:grid-cols-2 gap-6" staggerDelay={0.12}>
             {features.map((feature, index) => (
               <StaggerItem key={index}>
-                <Card className="shadow-elegant hover:shadow-glow transition-all duration-300 group h-full">
+                <Card className="bg-card/35 shadow-elegant hover:shadow-glow transition-all duration-300 group h-full">
                   <CardContent className="p-6">
                     <div className="bg-accent/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-accent/20 transition-colors">
                       <feature.icon className="h-6 w-6 text-accent" />
