@@ -1,6 +1,48 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowUp, ArrowDown, ArrowRight } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { motion } from "framer-motion";
+
+const forces = [
+  {
+    label: "Heeling Force",
+    direction: "→",
+    formula: "F_heel = Wind pressure × Sail area",
+    description: "Wind pushes the sails, creating a lateral force that tends to tip the boat.",
+    color: "from-cyan-400 to-cyan-600",
+    barColor: "bg-cyan-500",
+    intensity: 70,
+    textColor: "text-cyan-400",
+  },
+  {
+    label: "Weight",
+    direction: "↓",
+    formula: "W = m × g",
+    description: "Gravity acts downward through the center of mass, including keel and CAFAR arm weight.",
+    color: "from-green-400 to-green-600",
+    barColor: "bg-green-500",
+    intensity: 85,
+    textColor: "text-green-400",
+  },
+  {
+    label: "Righting Arm",
+    direction: "↔",
+    formula: "M_right = W × Righting Arm Length",
+    description: "CAFAR extends the foil laterally, dramatically increasing the righting arm and the stabilizing moment.",
+    color: "from-fuchsia-400 to-fuchsia-600",
+    barColor: "bg-fuchsia-500",
+    intensity: 95,
+    textColor: "text-fuchsia-400",
+  },
+  {
+    label: "Heeling Arm",
+    direction: "↕",
+    formula: "M_heel = F_heel × Heeling Arm",
+    description: "The vertical distance between the sail's center of effort and the hull's center of lateral resistance.",
+    color: "from-amber-400 to-amber-600",
+    barColor: "bg-amber-500",
+    intensity: 60,
+    textColor: "text-amber-400",
+  },
+];
 
 export const Physics = () => {
   return (
@@ -17,105 +59,79 @@ export const Physics = () => {
             </p>
           </div>
         </ScrollReveal>
-        
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <ScrollReveal direction="left" className="order-2 lg:order-1">
-            <img 
-              src="/lovable-uploads/10b89d2d-f4a5-4361-be93-b39cac2f2cfb.png" 
-              alt="CAFAR Physics Principles Diagram" 
-              className="w-full rounded-lg shadow-elegant"
-            />
-          </ScrollReveal>
-          
-          <StaggerContainer className="order-1 lg:order-2 space-y-6" staggerDelay={0.15}>
-            <StaggerItem>
-              <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-accent/10 p-3 rounded-lg">
-                      <ArrowRight className="h-6 w-6 text-accent" />
-                    </div>
+
+        {/* Force Breakdown Steps */}
+        <StaggerContainer className="space-y-6 mb-16" staggerDelay={0.15}>
+          {forces.map((force, index) => (
+            <StaggerItem key={index}>
+              <div className="bg-card/35 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-elegant">
+                <div className="flex flex-col md:flex-row md:items-center gap-6">
+                  {/* Step number + direction */}
+                  <div className="flex items-center gap-4 md:w-48 shrink-0">
+                    <span className={`text-4xl font-black ${force.textColor}`}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
                     <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-2">
-                        Heeling Force Management
+                      <span className={`text-2xl font-bold ${force.textColor}`}>
+                        {force.direction}
+                      </span>
+                      <h3 className="text-lg font-bold text-foreground">
+                        {force.label}
                       </h3>
-                      <p className="text-muted-foreground">
-                        Wind forces create a heeling moment that tends to tip the boat. 
-                        CAFAR's extended arm generates an opposing moment to maintain stability.
-                      </p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-            
-            <StaggerItem>
-              <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-accent/10 p-3 rounded-lg">
-                      <ArrowDown className="h-6 w-6 text-accent" />
+
+                  {/* Description + formula */}
+                  <div className="flex-1 space-y-3">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {force.description}
+                    </p>
+                    <code className={`text-xs font-mono ${force.textColor} bg-background/40 px-3 py-1 rounded-full`}>
+                      {force.formula}
+                    </code>
+                  </div>
+
+                  {/* Intensity bar */}
+                  <div className="md:w-48 shrink-0">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground mb-1">
+                      <span>Intensity</span>
+                      <span className={`font-bold ${force.textColor}`}>{force.intensity}%</span>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-2">
-                        Moment Arm Extension
-                      </h3>
-                      <p className="text-muted-foreground">
-                        By positioning the foil far from the hull centerline, CAFAR dramatically 
-                        increases the righting arm length, amplifying the stabilizing effect.
-                      </p>
+                    <div className="h-3 bg-background/40 rounded-full overflow-hidden">
+                      <motion.div
+                        className={`h-full rounded-full bg-gradient-to-r ${force.color}`}
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${force.intensity}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.3 + index * 0.15, ease: "easeOut" }}
+                      />
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </StaggerItem>
-            
-            <StaggerItem>
-              <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-accent/10 p-3 rounded-lg">
-                      <ArrowUp className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-2">
-                        Force Balance Optimization
-                      </h3>
-                      <p className="text-muted-foreground">
-                        The system balances heeling forces with counteracting forces generated by the foil, 
-                        creating superior stability compared to conventional designs.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-          </StaggerContainer>
-        </div>
-        
-        <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.1}>
-          <StaggerItem>
-            <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
-              <div className="text-3xl font-bold text-primary mb-2">Force</div>
-              <div className="text-sm text-muted-foreground mb-2">Heeling Moment</div>
-              <div className="text-xs text-muted-foreground">Wind × Heeling Arm</div>
-            </div>
-          </StaggerItem>
-          <StaggerItem>
-            <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
-              <div className="text-3xl font-bold text-accent mb-2">Balance</div>
-              <div className="text-sm text-muted-foreground mb-2">Equilibrium</div>
-              <div className="text-xs text-muted-foreground">Heeling = Righting</div>
-            </div>
-          </StaggerItem>
-          <StaggerItem>
-            <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
-              <div className="text-3xl font-bold text-primary-glow mb-2">Moment</div>
-              <div className="text-sm text-muted-foreground mb-2">Righting Moment</div>
-              <div className="text-xs text-muted-foreground">Weight × Righting Arm</div>
-            </div>
-          </StaggerItem>
+          ))}
         </StaggerContainer>
+
+        {/* Equilibrium summary */}
+        <ScrollReveal delay={0.3}>
+          <div className="bg-card/35 backdrop-blur-sm rounded-lg shadow-elegant p-8 text-center max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-3">Equilibrium Condition</h3>
+            <div className="flex items-center justify-center gap-3 flex-wrap mb-4">
+              <code className="text-cyan-400 font-mono text-sm bg-background/40 px-3 py-1.5 rounded-full">
+                F_heel × Heeling Arm
+              </code>
+              <span className="text-2xl font-bold text-accent">=</span>
+              <code className="text-fuchsia-400 font-mono text-sm bg-background/40 px-3 py-1.5 rounded-full">
+                W × Righting Arm
+              </code>
+            </div>
+            <p className="text-muted-foreground text-sm max-w-xl mx-auto">
+              CAFAR increases the righting arm without modifying hull width, 
+              delivering a superior stabilizing moment at any wind condition.
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
