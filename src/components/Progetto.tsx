@@ -47,13 +47,11 @@ export const Progetto = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left">
             <div className="relative">
-              <div className="bg-card/35 rounded-lg p-2">
-                <img 
-                  src={cafarBoat} 
-                  alt="CAFAR System - 3D View" 
-                  className="w-full rounded-lg"
-                />
-              </div>
+              <img 
+                src={cafarBoat} 
+                alt="CAFAR System - 3D View" 
+                className="w-full"
+              />
             </div>
           </ScrollReveal>
           
