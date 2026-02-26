@@ -11,8 +11,8 @@ export const Progetto = () => {
     },
     {
       icon: Wrench,
-      title: "Easy Retrofit",
-      description: "Removable system, installable on existing boats without permanent structural modifications.",
+      title: "Affordable Production",
+      description: "Significantly lower manufacturing costs compared to traditional foiling systems, making high performance accessible.",
     },
     {
       icon: Shield,
