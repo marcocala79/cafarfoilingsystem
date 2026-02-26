@@ -1,5 +1,5 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
-import cafarDiagram from "@/assets/cafar-diagram.jpg";
+import cafarDiagram from "@/assets/cafar-diagram-original.png";
 
 export const Physics = () => {
   return (
