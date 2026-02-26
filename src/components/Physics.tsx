@@ -1,5 +1,6 @@
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { motion } from "framer-motion";
+import cafarDiagram from "@/assets/cafar-diagram.jpg";
 
 const forces = [
   {
@@ -60,44 +61,37 @@ export const Physics = () => {
           </div>
         </ScrollReveal>
 
-        {/* Force Breakdown Steps */}
-        <StaggerContainer className="space-y-6 mb-16" staggerDelay={0.15}>
-          {forces.map((force, index) => (
-            <StaggerItem key={index}>
-              <div className="bg-card/35 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-elegant">
-                <div className="flex flex-col md:flex-row md:items-center gap-6">
-                  {/* Step number + direction */}
-                  <div className="flex items-center gap-4 md:w-48 shrink-0">
-                    <span className={`text-4xl font-black ${force.textColor}`}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16 items-start">
+          {/* Force Breakdown Steps */}
+          <StaggerContainer className="space-y-6" staggerDelay={0.15}>
+            {forces.map((force, index) => (
+              <StaggerItem key={index}>
+                <div className="bg-card/35 backdrop-blur-sm rounded-lg p-5 shadow-elegant">
+                  <div className="flex items-center gap-4 mb-3">
+                    <span className={`text-3xl font-black ${force.textColor}`}>
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <div>
-                      <span className={`text-2xl font-bold ${force.textColor}`}>
+                      <span className={`text-xl font-bold ${force.textColor}`}>
                         {force.direction}
                       </span>
-                      <h3 className="text-lg font-bold text-foreground">
+                      <h3 className="text-base font-bold text-foreground">
                         {force.label}
                       </h3>
                     </div>
                   </div>
-
-                  {/* Description + formula */}
-                  <div className="flex-1 space-y-3">
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {force.description}
-                    </p>
-                    <code className={`text-xs font-mono ${force.textColor} bg-background/40 px-3 py-1 rounded-full`}>
-                      {force.formula}
-                    </code>
-                  </div>
-
-                  {/* Intensity bar */}
-                  <div className="md:w-48 shrink-0">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-2">
+                    {force.description}
+                  </p>
+                  <code className={`text-xs font-mono ${force.textColor} bg-background/40 px-3 py-1 rounded-full`}>
+                    {force.formula}
+                  </code>
+                  <div className="mt-3">
                     <div className="flex items-center justify-between text-xs text-muted-foreground mb-1">
                       <span>Intensity</span>
                       <span className={`font-bold ${force.textColor}`}>{force.intensity}%</span>
                     </div>
-                    <div className="h-3 bg-background/40 rounded-full overflow-hidden">
+                    <div className="h-2.5 bg-background/40 rounded-full overflow-hidden">
                       <motion.div
                         className={`h-full rounded-full bg-gradient-to-r ${force.color}`}
                         initial={{ width: 0 }}
@@ -108,10 +102,23 @@ export const Physics = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          {/* Original Diagram */}
+          <ScrollReveal delay={0.2}>
+            <div className="bg-card/35 backdrop-blur-sm rounded-lg p-4 shadow-elegant sticky top-24">
+              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3 text-center">Force Diagram Reference</p>
+              <img
+                src={cafarDiagram}
+                alt="CAFAR force diagram showing heeling and righting forces"
+                className="w-full rounded-md"
+                loading="lazy"
+              />
+            </div>
+          </ScrollReveal>
+        </div>
 
         {/* Equilibrium summary */}
         <ScrollReveal delay={0.3}>
