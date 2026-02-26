@@ -45,7 +45,7 @@ export const Navbar = () => {
             onClick={() => scrollToSection("hero")}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <img src="/lovable-uploads/cafar-logo-white.png" alt="CAFAR Logo" className="h-12 w-auto" />
+            <span className="text-2xl font-bold tracking-wider text-primary-foreground">CAFAR</span>
           </button>
 
           {/* Desktop Navigation */}
