@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sailboat } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Navbar = () => {
@@ -45,6 +45,7 @@ export const Navbar = () => {
             onClick={() => scrollToSection("hero")}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
+            <Sailboat className="h-6 w-6 text-primary-foreground" strokeWidth={2.5} />
             <span className="text-2xl font-bold tracking-wider text-primary-foreground">CAFAR</span>
           </button>
 
