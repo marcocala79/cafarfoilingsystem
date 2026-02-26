@@ -52,7 +52,16 @@ export const Partnership = () => {
           ))}
         </StaggerContainer>
 
-        <ScrollReveal delay={0.3}>
+        <ScrollReveal delay={0.25}>
+          <blockquote className="max-w-2xl mx-auto text-center mb-14 italic text-foreground/70 text-lg leading-relaxed border-l-4 border-accent pl-6 py-2">
+            <p className="mb-3">
+              "In the long history of humankind, those who learned to collaborate and improvise more effectively have prevailed."
+            </p>
+            <footer className="text-sm font-semibold text-accent not-italic">— Charles Darwin</footer>
+          </blockquote>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.4}>
           <div className="text-center">
             <a href="#contact">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-10 py-6 rounded-full shadow-elegant">
