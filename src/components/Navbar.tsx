@@ -27,7 +27,7 @@ export const Navbar = () => {
     
     { label: "Applications", id: "applications" },
     { label: "Patent", id: "patent" },
-    { label: "Contact", id: "contact" },
+    { label: "Partner", id: "partnership" },
   ];
 
   return (
