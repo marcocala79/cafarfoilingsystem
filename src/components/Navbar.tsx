@@ -43,9 +43,9 @@ export const Navbar = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-2xl font-bold text-primary-foreground hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            CAFAR
+            <img src="/lovable-uploads/cafar-logo-v2.png" alt="CAFAR Logo" className="h-8 w-auto" />
           </button>
 
           {/* Desktop Navigation */}
