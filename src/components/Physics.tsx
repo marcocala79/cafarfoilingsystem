@@ -4,7 +4,7 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/Scroll
 
 export const Physics = () => {
   return (
-    <section id="physics" className="py-20 bg-background/80 backdrop-blur-sm">
+    <section id="physics" className="py-20 bg-background/60 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">

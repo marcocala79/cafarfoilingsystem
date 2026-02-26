@@ -316,7 +316,7 @@ const strategicPackages = [
 
 export const PatentClaims = () => {
   return (
-    <section id="patent" className="py-20 bg-background/80 backdrop-blur-sm">
+    <section id="patent" className="py-20 bg-background/60 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">

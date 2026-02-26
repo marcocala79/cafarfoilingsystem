@@ -31,7 +31,7 @@ export const Applicazioni = () => {
   ];
 
   return (
-    <section id="applications" className="py-20 bg-muted/20 backdrop-blur-sm">
+    <section id="applications" className="py-20 bg-background/50 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
