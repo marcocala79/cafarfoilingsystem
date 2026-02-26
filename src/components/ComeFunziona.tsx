@@ -1,6 +1,7 @@
 import cafarElements from "@/assets/cafar-elements.jpg";
 import cafarConditions from "@/assets/cafar-conditions.jpg";
 import cafarFlymode from "@/assets/cafar-flymode.jpg";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const ComeFunziona = () => {
   const steps = [
@@ -27,16 +28,18 @@ export const ComeFunziona = () => {
   return (
     <section id="how-it-works" className="py-20 bg-muted/20 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-accent font-medium mb-2">How It Works</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Technology in Action
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover how the CAFAR system transforms sailing, 
-            combining advanced engineering and intelligent design.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <p className="text-accent font-medium mb-2">How It Works</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Technology in Action
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Discover how the CAFAR system transforms sailing, 
+              combining advanced engineering and intelligent design.
+            </p>
+          </div>
+        </ScrollReveal>
         
         <div className="space-y-16">
           {steps.map((step, index) => (
@@ -46,28 +49,32 @@ export const ComeFunziona = () => {
                 index % 2 === 1 ? "lg:grid-flow-dense" : ""
               }`}
             >
-              <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-6xl font-bold text-accent/20">{step.number}</span>
+              <ScrollReveal direction={index % 2 === 0 ? "left" : "right"} delay={0.1}>
+                <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-6xl font-bold text-accent/20">{step.number}</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                    {step.title}
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+              </ScrollReveal>
               
-              <div className={index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
-                <div className="relative overflow-hidden rounded-lg shadow-elegant">
-                  <img 
-                    src={step.image} 
-                    alt={step.title} 
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+              <ScrollReveal direction={index % 2 === 0 ? "right" : "left"} delay={0.2}>
+                <div className={index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
+                  <div className="relative overflow-hidden rounded-lg shadow-elegant">
+                    <img 
+                      src={step.image} 
+                      alt={step.title} 
+                      className="w-full h-auto object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -317,21 +318,22 @@ export const PatentClaims = () => {
   return (
     <section id="patent" className="py-20 bg-background/80 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-accent font-medium mb-2">Intellectual Property</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Patent claim map
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            CAFAR is not just "a foil" — it's a platform of mobile hydrodynamic
-            architectures, protected claim by claim.
-          </p>
-          <p className="text-sm text-muted-foreground mt-4">
-            Patent application IT 102021000023279 — "Sailing vessel with
-            auxiliary hydrodynamic surface"
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <p className="text-accent font-medium mb-2">Intellectual Property</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Patent claim map
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              CAFAR is not just "a foil" — it's a platform of mobile hydrodynamic
+              architectures, protected claim by claim.
+            </p>
+            <p className="text-sm text-muted-foreground mt-4">
+              Patent application IT 102021000023279 — "Sailing vessel with
+              auxiliary hydrodynamic surface"
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Claims Accordion */}
         <Accordion type="multiple" className="space-y-3 mb-16">
@@ -412,37 +414,37 @@ export const PatentClaims = () => {
           ))}
         </Accordion>
 
-        {/* Strategic Reading */}
-        <div className="text-center mb-10">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            Strategic reading
-          </h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Claims group naturally into four strategic licensing packages.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Strategic reading
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Claims group naturally into four strategic licensing packages.
+            </p>
+          </div>
+        </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
           {strategicPackages.map((pkg, i) => (
-            <Card
-              key={i}
-              className="shadow-elegant hover:shadow-glow transition-all duration-300 group"
-            >
-              <CardContent className="p-6 text-center">
-                <pkg.icon
-                  className={`h-8 w-8 mx-auto mb-3 ${pkg.colorClass}`}
-                />
-                <Badge variant="secondary" className="mb-3">
-                  {pkg.claims}
-                </Badge>
-                <h4 className="font-bold text-foreground mb-2">{pkg.label}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {pkg.description}
-                </p>
-              </CardContent>
-            </Card>
+            <StaggerItem key={i}>
+              <Card className="shadow-elegant hover:shadow-glow transition-all duration-300 group h-full">
+                <CardContent className="p-6 text-center">
+                  <pkg.icon
+                    className={`h-8 w-8 mx-auto mb-3 ${pkg.colorClass}`}
+                  />
+                  <Badge variant="secondary" className="mb-3">
+                    {pkg.claims}
+                  </Badge>
+                  <h4 className="font-bold text-foreground mb-2">{pkg.label}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {pkg.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

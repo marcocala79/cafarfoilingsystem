@@ -1,106 +1,121 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUp, ArrowDown, ArrowRight } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 
 export const Physics = () => {
   return (
     <section id="physics" className="py-20 bg-background/80 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-accent font-medium mb-2">The Science</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Physics Principles
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Understanding the fundamental physics behind CAFAR's stability enhancement
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <p className="text-accent font-medium mb-2">The Science</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Physics Principles
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Understanding the fundamental physics behind CAFAR's stability enhancement
+            </p>
+          </div>
+        </ScrollReveal>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="order-2 lg:order-1">
+          <ScrollReveal direction="left" className="order-2 lg:order-1">
             <img 
               src="/lovable-uploads/10b89d2d-f4a5-4361-be93-b39cac2f2cfb.png" 
               alt="CAFAR Physics Principles Diagram" 
               className="w-full rounded-lg shadow-elegant"
             />
-          </div>
+          </ScrollReveal>
           
-          <div className="order-1 lg:order-2 space-y-6">
-            <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <ArrowRight className="h-6 w-6 text-accent" />
+          <StaggerContainer className="order-1 lg:order-2 space-y-6" staggerDelay={0.15}>
+            <StaggerItem>
+              <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-accent/10 p-3 rounded-lg">
+                      <ArrowRight className="h-6 w-6 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">
+                        Heeling Force Management
+                      </h3>
+                      <p className="text-muted-foreground">
+                        Wind forces create a heeling moment that tends to tip the boat. 
+                        CAFAR's extended arm generates an opposing moment to maintain stability.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
-                      Heeling Force Management
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Wind forces create a heeling moment that tends to tip the boat. 
-                      CAFAR's extended arm generates an opposing moment to maintain stability.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </StaggerItem>
             
-            <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <ArrowDown className="h-6 w-6 text-accent" />
+            <StaggerItem>
+              <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-accent/10 p-3 rounded-lg">
+                      <ArrowDown className="h-6 w-6 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">
+                        Moment Arm Extension
+                      </h3>
+                      <p className="text-muted-foreground">
+                        By positioning the foil far from the hull centerline, CAFAR dramatically 
+                        increases the righting arm length, amplifying the stabilizing effect.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
-                      Moment Arm Extension
-                    </h3>
-                    <p className="text-muted-foreground">
-                      By positioning the foil far from the hull centerline, CAFAR dramatically 
-                      increases the righting arm length, amplifying the stabilizing effect.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </StaggerItem>
             
-            <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <ArrowUp className="h-6 w-6 text-accent" />
+            <StaggerItem>
+              <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-accent/10 p-3 rounded-lg">
+                      <ArrowUp className="h-6 w-6 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">
+                        Force Balance Optimization
+                      </h3>
+                      <p className="text-muted-foreground">
+                        The system balances heeling forces with counteracting forces generated by the foil, 
+                        creating superior stability compared to conventional designs.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
-                      Force Balance Optimization
-                    </h3>
-                    <p className="text-muted-foreground">
-                      The system balances heeling forces with counteracting forces generated by the foil, 
-                      creating superior stability compared to conventional designs.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                </CardContent>
+              </Card>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
-            <div className="text-3xl font-bold text-primary mb-2">Force</div>
-            <div className="text-sm text-muted-foreground mb-2">Heeling Moment</div>
-            <div className="text-xs text-muted-foreground">Wind × Heeling Arm</div>
-          </div>
-          <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
-            <div className="text-3xl font-bold text-accent mb-2">Balance</div>
-            <div className="text-sm text-muted-foreground mb-2">Equilibrium</div>
-            <div className="text-xs text-muted-foreground">Heeling = Righting</div>
-          </div>
-          <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
-            <div className="text-3xl font-bold text-primary-glow mb-2">Moment</div>
-            <div className="text-sm text-muted-foreground mb-2">Righting Moment</div>
-            <div className="text-xs text-muted-foreground">Weight × Righting Arm</div>
-          </div>
-        </div>
+        <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.1}>
+          <StaggerItem>
+            <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
+              <div className="text-3xl font-bold text-primary mb-2">Force</div>
+              <div className="text-sm text-muted-foreground mb-2">Heeling Moment</div>
+              <div className="text-xs text-muted-foreground">Wind × Heeling Arm</div>
+            </div>
+          </StaggerItem>
+          <StaggerItem>
+            <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
+              <div className="text-3xl font-bold text-accent mb-2">Balance</div>
+              <div className="text-sm text-muted-foreground mb-2">Equilibrium</div>
+              <div className="text-xs text-muted-foreground">Heeling = Righting</div>
+            </div>
+          </StaggerItem>
+          <StaggerItem>
+            <div className="bg-card p-8 rounded-lg shadow-elegant text-center">
+              <div className="text-3xl font-bold text-primary-glow mb-2">Moment</div>
+              <div className="text-sm text-muted-foreground mb-2">Righting Moment</div>
+              <div className="text-xs text-muted-foreground">Weight × Righting Arm</div>
+            </div>
+          </StaggerItem>
+        </StaggerContainer>
       </div>
     </section>
   );
