@@ -21,7 +21,7 @@ export const Partnership = () => {
   ];
 
   return (
-    <section id="partnership" className="py-20 bg-background relative overflow-hidden">
+    <section id="partnership" className="py-20 bg-background/80 backdrop-blur-sm relative overflow-hidden">
       {/* Decorative accent line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-accent rounded-full" />
 

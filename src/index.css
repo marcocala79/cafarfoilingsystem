@@ -107,7 +107,26 @@ All colors MUST be HSL.
   }
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling & parallax */
 html {
   scroll-behavior: smooth;
+}
+
+/* Parallax container */
+#hero {
+  transform-style: preserve-3d;
+  perspective: 1px;
+}
+
+/* Sections with ocean background showing through */
+section {
+  position: relative;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  z-index: -1;
 }

@@ -5,7 +5,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-foreground/95 backdrop-blur-sm text-background py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>

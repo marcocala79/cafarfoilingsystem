@@ -27,7 +27,7 @@ export const Progetto = () => {
   ];
 
   return (
-    <section id="project" className="py-20 bg-background">
+    <section id="project" className="py-20 bg-background/80 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-accent font-medium mb-2">The Project</p>
