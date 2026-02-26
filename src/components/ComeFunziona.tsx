@@ -34,7 +34,7 @@ export const ComeFunziona = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Technology in Action
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               Discover how the CAFAR system transforms sailing, 
               combining advanced engineering and intelligent design.
             </p>
