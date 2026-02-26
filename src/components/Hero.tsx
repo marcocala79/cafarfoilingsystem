@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Zap, Users } from "lucide-react";
-import heroImage from "@/assets/hero-ocean.jpg";
+import heroImage from "@/assets/hero-ocean-tech.jpg";
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
