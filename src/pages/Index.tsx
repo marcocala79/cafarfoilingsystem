@@ -8,10 +8,11 @@ import { VppResults } from "@/components/VppResults";
 
 import { Applicazioni } from "@/components/Applicazioni";
 import { PatentClaims } from "@/components/PatentClaims";
+import { Inventori } from "@/components/Inventori";
 import { Partnership } from "@/components/Partnership";
 import { Contatti } from "@/components/Contatti";
 import { Footer } from "@/components/Footer";
-import oceanBg from "@/assets/hero-ocean-tech.jpg";
+import oceanBg from "@/assets/hero-ocean-tech.webp";
 
 const Index = () => {
   return (
@@ -40,6 +41,7 @@ const Index = () => {
         
         <Applicazioni />
         <PatentClaims />
+        <Inventori />
         <Partnership />
         <Contatti />
         <Footer />

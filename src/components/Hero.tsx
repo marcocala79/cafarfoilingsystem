@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Zap, Users } from "lucide-react";
-import heroImage from "@/assets/hero-ocean-tech.jpg";
+import heroImage from "@/assets/hero-ocean-tech.webp";
 import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Hero = () => {
@@ -18,6 +18,9 @@ export const Hero = () => {
         <img
           src={heroImage}
           alt={t.hero.imgAlt}
+          width={1600}
+          height={900}
+          fetchPriority="high"
           className="w-full h-full object-cover"
           style={{ willChange: 'transform' }}
         />

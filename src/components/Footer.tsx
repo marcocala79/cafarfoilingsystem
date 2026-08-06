@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Footer = () => {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const privacyPath = lang === "it" ? "/it/privacy" : "/privacy";
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -45,8 +47,12 @@ export const Footer = () => {
 
         </div>
 
-        <div className="border-t border-background/20 pt-8 text-center text-background/50">
+        <div className="border-t border-background/20 pt-8 flex flex-col sm:flex-row items-center justify-center gap-x-4 gap-y-2 text-center text-background/50">
           <p>{t.footer.rights}</p>
+          <span className="hidden sm:inline">·</span>
+          <Link to={privacyPath} className="hover:text-background transition-colors">
+            {t.contact.form.consentLink}
+          </Link>
         </div>
       </div>
     </footer>

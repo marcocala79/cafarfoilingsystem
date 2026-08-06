@@ -23,8 +23,10 @@ export const VppResults = () => {
         <ScrollReveal delay={0.15}>
           <div className="bg-card rounded-lg shadow-elegant p-4 mb-12">
             <img
-              src="/lovable-uploads/1c80fcfe-0be3-424a-a5f9-3508faab86b1.png"
+              src="/lovable-uploads/vpp-comparison-chart.webp"
               alt={t.vpp.imgAlt}
+              width={1920}
+              height={897}
               className="w-full h-auto rounded"
               loading="lazy"
             />

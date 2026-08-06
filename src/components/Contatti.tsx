@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,7 +11,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Contatti = () => {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -18,12 +19,33 @@ export const Contatti = () => {
     company: "",
     message: "",
   });
+  const [consent, setConsent] = useState(false);
+  const [honeypot, setHoneypot] = useState(""); // anti-spam: real users never fill this
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const privacyPath = lang === "it" ? "/it/privacy" : "/privacy";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Honeypot: if filled, silently drop (likely a bot) without hitting the backend.
+    if (honeypot.trim() !== "") {
+      setFormData({ name: "", email: "", company: "", message: "" });
+      return;
+    }
+
+    // GDPR: require explicit consent before processing personal data.
+    if (!consent) {
+      toast({
+        title: t.contact.form.errTitle,
+        description: t.contact.form.consentRequired,
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
-    
+
     try {
       const trimmedData = {
         name: formData.name.trim(),
@@ -52,6 +74,7 @@ export const Contatti = () => {
       });
 
       setFormData({ name: "", email: "", company: "", message: "" });
+      setConsent(false);
     } catch (error) {
       console.error("Error submitting contact form:", error);
       toast({
@@ -168,8 +191,42 @@ export const Contatti = () => {
                       placeholder={t.contact.form.messagePh}
                     />
                   </div>
-                  <Button 
-                    type="submit" 
+
+                  {/* Honeypot: hidden from users, catches automated spam bots */}
+                  <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px" }}>
+                    <label htmlFor="website">Leave this field empty</label>
+                    <input
+                      id="website"
+                      name="website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                    />
+                  </div>
+
+                  {/* GDPR consent */}
+                  <div className="flex items-start gap-3">
+                    <input
+                      id="consent"
+                      type="checkbox"
+                      checked={consent}
+                      onChange={(e) => setConsent(e.target.checked)}
+                      required
+                      className="mt-1 h-4 w-4 shrink-0 rounded border-primary-foreground/30 bg-primary-foreground/10 accent-accent"
+                    />
+                    <label htmlFor="consent" className="text-sm text-primary-foreground/80 leading-relaxed">
+                      {t.contact.form.consent}{" "}
+                      <Link to={privacyPath} className="text-accent underline hover:text-accent/80">
+                        {t.contact.form.consentLink}
+                      </Link>
+                      .
+                    </label>
+                  </div>
+
+                  <Button
+                    type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                   >

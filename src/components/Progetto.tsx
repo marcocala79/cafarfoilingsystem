@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Wrench, Shield, Award } from "lucide-react";
-import cafarBoat from "@/assets/cafar-boat.png";
+import cafarBoat from "@/assets/cafar-boat.webp";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { useI18n } from "@/i18n/LanguageProvider";
 
@@ -30,6 +30,9 @@ export const Progetto = () => {
               <img
                 src={cafarBoat}
                 alt={t.project.imgAlt}
+                width={1536}
+                height={1024}
+                loading="lazy"
                 className="w-full"
               />
             </div>

@@ -23,6 +23,6 @@ export default defineConfig(({ mode }) => ({
   ssgOptions: {
     script: "async",
     formatting: "minify",
-    includedRoutes: () => ["/", "/it"],
+    includedRoutes: () => ["/", "/it", "/privacy", "/it/privacy"],
   },
 }));

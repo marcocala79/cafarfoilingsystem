@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import Index from "./pages/Index";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,8 @@ export const routes: RouteRecord[] = [
     children: [
       { index: true, element: <Index /> },
       { path: "it", element: <Index /> },
+      { path: "privacy", element: <PrivacyPolicy /> },
+      { path: "it/privacy", element: <PrivacyPolicy /> },
       // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
       { path: "*", element: <NotFound /> },
     ],

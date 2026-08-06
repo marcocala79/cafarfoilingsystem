@@ -11,6 +11,7 @@ export const SideNav = () => {
     { id: "vpp-results", label: t.side.vpp },
     { id: "applications", label: t.side.applications },
     { id: "patent", label: t.side.patent },
+    { id: "inventors", label: t.side.inventors },
     { id: "partnership", label: t.side.partner },
     { id: "contact", label: t.side.contact },
   ];

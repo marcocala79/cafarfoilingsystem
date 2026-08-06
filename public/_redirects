@@ -2,6 +2,6 @@
 /it        /it.html      200
 
 # SPA fallback: any other path is handled by client-side routing.
-# Real static files (/, /sitemap.xml, /robots.txt, /og-image.png, assets) are
+# Real static files (/, /sitemap.xml, /robots.txt, /og-image.jpg, assets) are
 # served directly and never hit this rule.
 /*         /index.html   200

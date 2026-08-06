@@ -1,5 +1,5 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
-import cafarDiagram from "@/assets/cafar-physics.png";
+import cafarDiagram from "@/assets/cafar-physics.webp";
 import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Physics = () => {
@@ -24,6 +24,8 @@ export const Physics = () => {
             <img
               src={cafarDiagram}
               alt={t.physics.imgAlt}
+              width={1754}
+              height={1334}
               className="w-full rounded-md"
               loading="lazy"
             />

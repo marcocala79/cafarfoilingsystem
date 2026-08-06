@@ -3,7 +3,7 @@ export type Lang = "en" | "it";
 export interface Dict {
   meta: { title: string; description: string };
   nav: { project: string; howItWorks: string; applications: string; patent: string; partner: string; contact: string };
-  side: { home: string; project: string; howItWorks: string; physics: string; vpp: string; applications: string; patent: string; partner: string; contact: string };
+  side: { home: string; project: string; howItWorks: string; physics: string; vpp: string; applications: string; patent: string; inventors: string; partner: string; contact: string };
   hero: { patent: string; tagline: string; ctaDiscover: string; ctaCollaborate: string; imgAlt: string };
   project: {
     eyebrow: string; heading: string; intro: string; imgAlt: string;
@@ -30,6 +30,10 @@ export interface Dict {
     claims: { title: string; description: string; technicalValue: string[]; applications: { sector: string; stars: number }[]; insight: string }[];
     packages: { label: string; claims: string; description: string }[];
   };
+  inventors: {
+    eyebrow: string; heading: string; intro: string;
+    people: { name: string; role: string; description: string }[];
+  };
   partner: {
     eyebrow: string; heading: string; intro: string;
     reasons: { title: string; description: string }[];
@@ -41,6 +45,7 @@ export interface Dict {
       name: string; email: string; company: string; message: string;
       namePh: string; emailPh: string; companyPh: string; messagePh: string;
       submit: string; sending: string;
+      consent: string; consentLink: string; consentRequired: string;
       successTitle: string; successMsg: string; errTitle: string; errMsg: string;
     };
   };
@@ -70,6 +75,7 @@ export const translations: Record<Lang, Dict> = {
       vpp: "VPP",
       applications: "Applications",
       patent: "Patent",
+      inventors: "Inventors",
       partner: "Partner",
       contact: "Contact",
     },
@@ -397,6 +403,26 @@ export const translations: Record<Lang, Dict> = {
         },
       ],
     },
+    inventors: {
+      eyebrow: "The Inventors",
+      heading: "The Minds Behind CAFAR",
+      intro:
+        "A project born from a passion for sailing and the drive to bring real innovation to foiling.",
+      people: [
+        {
+          name: "Francesco Belvisi",
+          role: "Inventor & Patent Co-holder",
+          description:
+            "Naval designer with a passion for sailing and 360° innovation. Creator of the CAFAR concept and driver of its technical development.",
+        },
+        {
+          name: "Marco Calatroni",
+          role: "Patent Co-holder & Strategic Partner",
+          description:
+            "Expert in project management and industrial and commercial relations. Key partner in developing and refining the CAFAR system.",
+        },
+      ],
+    },
     partner: {
       eyebrow: "Partnership",
       heading: "Let's Build the Future of Foiling.",
@@ -442,6 +468,9 @@ export const translations: Record<Lang, Dict> = {
         messagePh: "How can we help you?",
         submit: "Send Message",
         sending: "Sending...",
+        consent: "I have read and accept the",
+        consentLink: "Privacy Policy",
+        consentRequired: "Please accept the Privacy Policy to continue.",
         successTitle: "Message sent!",
         successMsg: "We'll get back to you as soon as possible.",
         errTitle: "Error",
@@ -480,6 +509,7 @@ export const translations: Record<Lang, Dict> = {
       vpp: "VPP",
       applications: "Applicazioni",
       patent: "Brevetto",
+      inventors: "Inventori",
       partner: "Partner",
       contact: "Contatti",
     },
@@ -807,6 +837,26 @@ export const translations: Record<Lang, Dict> = {
         },
       ],
     },
+    inventors: {
+      eyebrow: "Gli Inventori",
+      heading: "Le Menti dietro CAFAR",
+      intro:
+        "Un progetto nato dalla passione per la vela e dalla voglia di portare vera innovazione nel foiling.",
+      people: [
+        {
+          name: "Francesco Belvisi",
+          role: "Inventore e Co-titolare del brevetto",
+          description:
+            "Progettista navale con la passione per la vela e l'innovazione a 360°. Ideatore del concept CAFAR e promotore del suo sviluppo tecnico.",
+        },
+        {
+          name: "Marco Calatroni",
+          role: "Co-titolare del brevetto e partner strategico",
+          description:
+            "Esperto di project management e relazioni industriali e commerciali. Partner chiave nello sviluppo e nell'affinamento del sistema CAFAR.",
+        },
+      ],
+    },
     partner: {
       eyebrow: "Partnership",
       heading: "Costruiamo Insieme il Futuro del Foiling.",
@@ -852,6 +902,9 @@ export const translations: Record<Lang, Dict> = {
         messagePh: "Come possiamo aiutarti?",
         submit: "Invia Messaggio",
         sending: "Invio in corso...",
+        consent: "Ho letto e accetto la",
+        consentLink: "Privacy Policy",
+        consentRequired: "Accetta la Privacy Policy per continuare.",
         successTitle: "Messaggio inviato!",
         successMsg: "Ti risponderemo il prima possibile.",
         errTitle: "Errore",
