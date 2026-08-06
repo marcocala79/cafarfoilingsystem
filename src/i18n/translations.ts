@@ -50,9 +50,9 @@ export interface Dict {
 export const translations: Record<Lang, Dict> = {
   en: {
     meta: {
-      title: "CAFAR | Canting Foil Arm — Patented Hydrofoil System for Sailing & Racing",
+      title: "CAFAR — Canting Foil Arm System | Foiling Innovation",
       description:
-        "CAFAR (Canting Foil Arm) is a patented hydrofoil system for sailing yachts and racing boats — boosting righting moment and foiling performance without widening the hull.",
+        "CAFAR is a patented Canting Foil Arm System — foiling technology that boosts righting moment for sailing innovation, without widening the hull.",
     },
     nav: {
       project: "The Project",
@@ -460,9 +460,9 @@ export const translations: Record<Lang, Dict> = {
   },
   it: {
     meta: {
-      title: "CAFAR | Canting Foil Arm — Sistema a Foil Brevettato per Vela e Regate",
+      title: "CAFAR — Canting Foil Arm System | Innovazione Vela",
       description:
-        "CAFAR (Canting Foil Arm) è un sistema a foil brevettato per yacht a vela e barche da regata: aumenta il momento raddrizzante e le prestazioni in foiling senza allargare lo scafo.",
+        "CAFAR è un Canting Foil Arm System brevettato: tecnologia foiling che aumenta il momento raddrizzante e innova la vela, senza allargare lo scafo.",
     },
     nav: {
       project: "Il Progetto",

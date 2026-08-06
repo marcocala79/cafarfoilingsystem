@@ -1,0 +1,10 @@
+# Netlify build configuration.
+# `npm run build` runs `vite-react-ssg build`, which prerenders each route to
+# static HTML (dist/index.html for "/", dist/it.html for "/it"). Netlify serves
+# that static HTML directly to crawlers, then the app hydrates on the client.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"

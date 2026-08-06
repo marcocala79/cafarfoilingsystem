@@ -1,0 +1,7 @@
+# Serve the prerendered Italian page for /it (static HTML wins over SPA fallback)
+/it        /it.html      200
+
+# SPA fallback: any other path is handled by client-side routing.
+# Real static files (/, /sitemap.xml, /robots.txt, /og-image.png, assets) are
+# served directly and never hit this rule.
+/*         /index.html   200

@@ -13,7 +13,7 @@ interface I18nContextValue {
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
-const SITE_URL = "https://www.cafarfoilingsystem.com";
+const SITE_URL = "https://cafarfoilingsystem.com";
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();

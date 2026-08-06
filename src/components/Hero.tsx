@@ -33,12 +33,14 @@ export const Hero = () => {
         </div>
 
         <div className="animate-float">
-          <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground mb-6 tracking-tight">
-            CAFAR
+          <h1 className="mb-6 tracking-tight">
+            <span className="block text-6xl md:text-8xl font-bold text-primary-foreground">
+              CAFAR
+            </span>
+            <span className="block mt-4 text-2xl md:text-3xl text-primary-foreground/90 font-light">
+              Canting Foil Arm System
+            </span>
           </h1>
-          <h2 className="text-2xl md:text-3xl text-primary-foreground/90 mb-6 font-light">
-            Canting Foil Arm System
-          </h2>
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-3xl mx-auto leading-relaxed">
             {t.hero.tagline}
           </p>
