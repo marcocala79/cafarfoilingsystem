@@ -7,8 +7,10 @@ import { Mail, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Contatti = () => {
+  const { t } = useI18n();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -45,16 +47,16 @@ export const Contatti = () => {
       }
 
       toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+        title: t.contact.form.successTitle,
+        description: t.contact.form.successMsg,
       });
-      
+
       setFormData({ name: "", email: "", company: "", message: "" });
     } catch (error) {
       console.error("Error submitting contact form:", error);
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
+        title: t.contact.form.errTitle,
+        description: t.contact.form.errMsg,
         variant: "destructive",
       });
     } finally {
@@ -74,13 +76,12 @@ export const Contatti = () => {
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-accent font-medium mb-2">Contact</p>
+            <p className="text-accent font-medium mb-2">{t.contact.eyebrow}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-              Let's talk about the future
+              {t.contact.heading}
             </h2>
             <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-              Interested in exploring the possibilities of the CAFAR system? 
-              Contact us to discuss collaboration and licensing opportunities.
+              {t.contact.intro}
             </p>
           </div>
         </ScrollReveal>
@@ -89,16 +90,16 @@ export const Contatti = () => {
           <ScrollReveal direction="left" delay={0.1}>
             <div>
               <h3 className="text-2xl font-bold text-primary-foreground mb-8">
-                Contact Information
+                {t.contact.infoTitle}
               </h3>
               <div className="space-y-6">
                 <p className="text-primary-foreground/80">
-                  Fill out the form and we'll get back to you at the email you provide.
+                  {t.contact.infoText}
                 </p>
               </div>
               <div className="mt-12 p-6 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10">
                 <p className="text-primary-foreground/80">
-                  <span className="font-semibold text-primary-foreground">Patent</span>
+                  <span className="font-semibold text-primary-foreground">{t.contact.patentLabel}</span>
                   <br />
                   No. 102021000023279
                 </p>
@@ -112,7 +113,7 @@ export const Contatti = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-primary-foreground mb-2">
-                      Name *
+                      {t.contact.form.name} *
                     </label>
                     <Input
                       id="name"
@@ -121,12 +122,12 @@ export const Contatti = () => {
                       onChange={handleChange}
                       required
                       className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-                      placeholder="Your name"
+                      placeholder={t.contact.form.namePh}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-primary-foreground mb-2">
-                      Email *
+                      {t.contact.form.email} *
                     </label>
                     <Input
                       id="email"
@@ -136,12 +137,12 @@ export const Contatti = () => {
                       onChange={handleChange}
                       required
                       className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-                      placeholder="Your email"
+                      placeholder={t.contact.form.emailPh}
                     />
                   </div>
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-primary-foreground mb-2">
-                      Company / Organization
+                      {t.contact.form.company}
                     </label>
                     <Input
                       id="company"
@@ -149,12 +150,12 @@ export const Contatti = () => {
                       value={formData.company}
                       onChange={handleChange}
                       className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-                      placeholder="Your company (optional)"
+                      placeholder={t.contact.form.companyPh}
                     />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-primary-foreground mb-2">
-                      Message *
+                      {t.contact.form.message} *
                     </label>
                     <Textarea
                       id="message"
@@ -164,7 +165,7 @@ export const Contatti = () => {
                       required
                       rows={4}
                       className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 resize-none"
-                      placeholder="How can we help you?"
+                      placeholder={t.contact.form.messagePh}
                     />
                   </div>
                   <Button 
@@ -173,11 +174,11 @@ export const Contatti = () => {
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                   >
                     {isSubmitting ? (
-                      "Sending..."
+                      t.contact.form.sending
                     ) : (
                       <>
                         <Send className="mr-2 h-4 w-4" />
-                        Send Message
+                        {t.contact.form.submit}
                       </>
                     )}
                   </Button>

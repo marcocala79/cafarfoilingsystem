@@ -1,25 +1,12 @@
 import { Handshake, Rocket, Users, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Partnership = () => {
-  const reasons = [
-    {
-      icon: Rocket,
-      title: "Early-Stage Advantage",
-      description: "Join at the ground floor of a patented foiling innovation with massive market potential.",
-    },
-    {
-      icon: Users,
-      title: "Co-Development",
-      description: "Collaborate on prototyping, testing, and refining the system for your specific application.",
-    },
-    {
-      icon: Globe,
-      title: "Licensing Opportunities",
-      description: "Exclusive or regional licensing agreements for manufacturing and distribution.",
-    },
-  ];
+  const { t } = useI18n();
+  const icons = [Rocket, Users, Globe];
+  const reasons = t.partner.reasons.map((r, i) => ({ ...r, icon: icons[i] }));
 
   return (
     <section id="partnership" className="py-20 bg-background/40 backdrop-blur-sm relative overflow-hidden">
@@ -28,12 +15,12 @@ export const Partnership = () => {
       <div className="max-w-5xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-accent font-medium mb-2 tracking-wide uppercase text-sm">Partnership</p>
+            <p className="text-accent font-medium mb-2 tracking-wide uppercase text-sm">{t.partner.eyebrow}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Let's Build the Future of Foiling.
+              {t.partner.heading}
             </h2>
             <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-              We're looking for bold partners — shipyards, sailors, teams, investors, and innovators — ready to push sailing forward.
+              {t.partner.intro}
             </p>
           </div>
         </ScrollReveal>
@@ -55,9 +42,9 @@ export const Partnership = () => {
         <ScrollReveal delay={0.25}>
           <blockquote className="max-w-3xl mx-auto text-center mb-14 p-8">
             <p className="text-xl md:text-2xl italic text-foreground leading-relaxed mb-4">
-              "In the long history of humankind, those who learned to collaborate and improvise more effectively have prevailed."
+              &ldquo;{t.partner.quote}&rdquo;
             </p>
-            <footer className="text-base font-bold text-accent tracking-wide">— Charles Darwin</footer>
+            <footer className="text-base font-bold text-accent tracking-wide">{t.partner.quoteAuthor}</footer>
           </blockquote>
         </ScrollReveal>
 
@@ -66,7 +53,7 @@ export const Partnership = () => {
             <a href="#contact">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-10 py-6 rounded-full shadow-elegant">
                 <Handshake className="mr-2 h-5 w-5" />
-                Get in Touch
+                {t.partner.cta}
               </Button>
             </a>
           </div>

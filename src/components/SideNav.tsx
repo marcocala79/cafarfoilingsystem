@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
-
-const sections = [
-  { id: "hero", label: "Home" },
-  { id: "project", label: "Project" },
-  { id: "how-it-works", label: "How It Works" },
-  { id: "physics", label: "Physics" },
-  { id: "vpp-results", label: "VPP" },
-  { id: "applications", label: "Applications" },
-  { id: "patent", label: "Patent" },
-  { id: "partnership", label: "Partner" },
-  { id: "contact", label: "Contact" },
-];
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export const SideNav = () => {
+  const { t } = useI18n();
+  const sections = [
+    { id: "hero", label: t.side.home },
+    { id: "project", label: t.side.project },
+    { id: "how-it-works", label: t.side.howItWorks },
+    { id: "physics", label: t.side.physics },
+    { id: "vpp-results", label: t.side.vpp },
+    { id: "applications", label: t.side.applications },
+    { id: "patent", label: t.side.patent },
+    { id: "partnership", label: t.side.partner },
+    { id: "contact", label: t.side.contact },
+  ];
   const [activeSection, setActiveSection] = useState("hero");
   const [showLabel, setShowLabel] = useState(true);
 

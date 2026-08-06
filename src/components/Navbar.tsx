@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Navbar = () => {
+  const { t, lang, otherLang, otherPath } = useI18n();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -22,13 +25,25 @@ export const Navbar = () => {
   };
 
   const navItems = [
-    { label: "The Project", id: "project" },
-    { label: "How It Works", id: "how-it-works" },
-    
-    { label: "Applications", id: "applications" },
-    { label: "Patent", id: "patent" },
-    { label: "Partner", id: "partnership" },
+    { label: t.nav.project, id: "project" },
+    { label: t.nav.howItWorks, id: "how-it-works" },
+    { label: t.nav.applications, id: "applications" },
+    { label: t.nav.patent, id: "patent" },
+    { label: t.nav.partner, id: "partnership" },
   ];
+
+  const LangSwitch = ({ className = "" }: { className?: string }) => (
+    <Link
+      to={otherPath}
+      hrefLang={otherLang}
+      aria-label={otherLang === "it" ? "Passa all'italiano" : "Switch to English"}
+      className={`text-xs font-semibold tracking-wider text-primary-foreground/70 hover:text-primary-foreground transition-colors ${className}`}
+    >
+      <span className="text-primary-foreground">{lang.toUpperCase()}</span>
+      <span className="mx-1 opacity-40">/</span>
+      <span>{otherLang.toUpperCase()}</span>
+    </Link>
+  );
 
   return (
     <nav
@@ -62,7 +77,8 @@ export const Navbar = () => {
           </div>
 
           {/* CTA Button & Theme Toggle */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-3">
+            <LangSwitch />
             <ThemeToggle />
             <Button
               variant="outline"
@@ -70,12 +86,13 @@ export const Navbar = () => {
               onClick={() => scrollToSection("contact")}
               className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
             >
-              Contact Us
+              {t.nav.contact}
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center gap-3">
+            <LangSwitch />
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -109,7 +126,7 @@ export const Navbar = () => {
                 onClick={() => scrollToSection("contact")}
                 className="w-full bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
               >
-                Contact Us
+                {t.nav.contact}
               </Button>
             </div>
           </div>

@@ -3,31 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CAFAR - Canting Foil Arm System</title>
-    <meta name="description" content="Revolutionary foiling technology combining maximum lateral extension, dual-side deployment, and modular hydrodynamic surfaces for enhanced vessel performance.">
+
+    <!-- Static meta tags. Language-dependent tags (title, description, canonical,
+         hreflang, og:title/description/url/locale, twitter:title/description) are
+         injected per route at build time via <Head> in LanguageProvider. -->
+    <meta name="keywords" content="foiling, hydrofoil, sailing, sail racing, yacht racing, regatta, regate, vela, nautica, foiling monohull, canting foil, righting moment, naval architecture, progettazione navale, boat design, costruzione barche, America's Cup, Coppa America, Mini Transat, IMOCA, sailing innovation, foil arm" />
     <meta name="author" content="Francesco Belvisi & Marco Calatroni" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
 
-    
-    
+    <!-- Open Graph / Facebook / LinkedIn (static parts) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.cafarfoilingsystem.com" />
-    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/KFRwkmuxw1hlyX7u1VTfYjjXp3j2/social-images/social-1771580966981-Screenshot_2026-02-20_alle_10.24.39.webp">
+    <meta property="og:site_name" content="CAFAR — Canting Foil Arm System" />
+    <meta property="og:image" content="https://www.cafarfoilingsystem.com/og-image.png" />
+    <meta property="og:image:alt" content="CAFAR Canting Foil Arm hydrofoil system on a racing sailing yacht" />
 
+    <!-- Twitter / X (static parts) -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/KFRwkmuxw1hlyX7u1VTfYjjXp3j2/social-images/social-1771580966981-Screenshot_2026-02-20_alle_10.24.39.webp">
-    
+    <meta name="twitter:image" content="https://www.cafarfoilingsystem.com/og-image.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-    
-  <meta property="og:title" content="CAFAR - Canting Foil Arm System">
-  <meta name="twitter:title" content="CAFAR - Canting Foil Arm System">
-  <meta property="og:description" content="Revolutionary foiling technology combining maximum lateral extension, dual-side deployment, and modular hydrodynamic surfaces for enhanced vessel performance.">
-  <meta name="twitter:description" content="Revolutionary foiling technology combining maximum lateral extension, dual-side deployment, and modular hydrodynamic surfaces for enhanced vessel performance.">
-</head>
+
+    <!-- Structured data: Organization + Product (Invention) + WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.cafarfoilingsystem.com/#organization",
+          "name": "CAFAR — Canting Foil Arm System",
+          "url": "https://www.cafarfoilingsystem.com/",
+          "logo": "https://www.cafarfoilingsystem.com/lovable-uploads/cafar-logo-white.png",
+          "description": "Developers of CAFAR, a patented canting foil arm hydrofoil system for sailing yachts, foiling monohulls and racing boats.",
+          "founder": [
+            { "@type": "Person", "name": "Francesco Belvisi" },
+            { "@type": "Person", "name": "Marco Calatroni" }
+          ]
+        },
+        {
+          "@type": "Product",
+          "@id": "https://www.cafarfoilingsystem.com/#product",
+          "name": "CAFAR — Canting Foil Arm System",
+          "alternateName": "Canting Foil Arm",
+          "category": "Hydrofoil sailing system",
+          "url": "https://www.cafarfoilingsystem.com/",
+          "image": "https://www.cafarfoilingsystem.com/og-image.png",
+          "brand": { "@id": "https://www.cafarfoilingsystem.com/#organization" },
+          "description": "CAFAR is a patented hydrofoil system that lets a foiling monohull increase its foil lever arm through an articulated canting arm, raising the righting moment without widening the hull. Designed for sail racing, ocean racing, cruising retrofits and America's Cup-class R&D.",
+          "keywords": "foiling, hydrofoil, sailing, sail racing, regatta, canting foil, righting moment, America's Cup, naval architecture, yacht design",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Patent",
+              "value": "IT 102021000023279"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.cafarfoilingsystem.com/#website",
+          "url": "https://www.cafarfoilingsystem.com/",
+          "name": "CAFAR — Canting Foil Arm System",
+          "inLanguage": ["en", "it"],
+          "publisher": { "@id": "https://www.cafarfoilingsystem.com/#organization" }
+        }
+      ]
+    }
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>
+
+    <!-- SEO / no-JavaScript fallback: crawler-visible core content -->
+    <noscript>
+      <h1>CAFAR — Canting Foil Arm System</h1>
+      <p>
+        CAFAR (Canting Foil Arm) is a patented hydrofoil system for sailing yachts, foiling
+        monohulls and racing boats. It increases the foil lever arm through an articulated canting
+        arm, raising the righting moment without widening the hull — delivering higher foiling
+        performance for sail racing, ocean racing, regattas and America's Cup-class innovation.
+        Patent No. IT 102021000023279. Invented by Francesco Belvisi and Marco Calatroni.
+      </p>
+      <p lang="it">
+        CAFAR è un sistema a foil brevettato per la vela, il foiling e le regate: aumenta il braccio
+        del foil e il momento raddrizzante senza allargare lo scafo, portando innovazione dalla
+        Coppa America alla nautica e alla progettazione navale.
+      </p>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,3 +1,7 @@
+User-agent: *
+Allow: /
+
+# Explicitly welcome major search and social crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +14,7 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+Sitemap: https://www.cafarfoilingsystem.com/sitemap.xml

@@ -1,51 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Trophy, Anchor, Factory, Lightbulb } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Applicazioni = () => {
-  const applications = [
-    {
-      icon: Trophy,
-      category: "Performance",
-      title: "Ocean Racing",
-      description: "Ideal for competitions like the Mini-Transat, where performance and reliability are essential.",
-    },
-    {
-      icon: Anchor,
-      category: "Versatility",
-      title: "Cruising Yachts",
-      description: "Retrofit on existing yachts to improve comfort and speed without invasive structural modifications.",
-    },
-    {
-      icon: Factory,
-      category: "Scalability",
-      title: "Series Production",
-      description: "Standardized system suitable for industrial production across different boat classes.",
-    },
-    {
-      icon: Lightbulb,
-      category: "Innovation",
-      title: "Prototypes & R&D",
-      description: "Ideal platform for experimentation and development of new foiling technologies.",
-    },
-  ];
+  const { t } = useI18n();
+  const icons = [Trophy, Anchor, Factory, Lightbulb];
+  const applications = t.apps.items.map((item, i) => ({ ...item, icon: icons[i] }));
+  const statColors = ["text-accent", "text-primary", "text-primary-glow"];
 
   return (
     <section id="applications" className="py-20 bg-background/35 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-accent font-medium mb-2">Applications</p>
+            <p className="text-accent font-medium mb-2">{t.apps.eyebrow}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Where to Use CAFAR
+              {t.apps.heading}
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              The versatility of the CAFAR system makes it suitable for multiple 
-              applications in the sailing and marine industry.
+              {t.apps.intro}
             </p>
           </div>
         </ScrollReveal>
-        
+
         <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
           {applications.map((app, index) => (
             <StaggerItem key={index}>
@@ -66,26 +44,16 @@ export const Applicazioni = () => {
             </StaggerItem>
           ))}
         </StaggerContainer>
-        
+
         <StaggerContainer className="grid md:grid-cols-3 gap-8 mt-16" staggerDelay={0.1}>
-          <StaggerItem>
-            <div className="bg-card/35 p-8 rounded-lg shadow-elegant text-center">
-              <div className="text-4xl font-bold text-accent mb-2">+15%</div>
-              <div className="text-muted-foreground">VMG Speed</div>
-            </div>
-          </StaggerItem>
-          <StaggerItem>
-            <div className="bg-card/35 p-8 rounded-lg shadow-elegant text-center">
-              <div className="text-4xl font-bold text-primary mb-2">6.5m</div>
-              <div className="text-muted-foreground">Mini 650</div>
-            </div>
-          </StaggerItem>
-          <StaggerItem>
-            <div className="bg-card/35 p-8 rounded-lg shadow-elegant text-center">
-              <div className="text-4xl font-bold text-primary-glow mb-2">VPP</div>
-              <div className="text-muted-foreground">Validated Simulations</div>
-            </div>
-          </StaggerItem>
+          {t.apps.stats.map((stat, i) => (
+            <StaggerItem key={i}>
+              <div className="bg-card/35 p-8 rounded-lg shadow-elegant text-center">
+                <div className={`text-4xl font-bold mb-2 ${statColors[i]}`}>{stat.value}</div>
+                <div className="text-muted-foreground">{stat.label}</div>
+              </div>
+            </StaggerItem>
+          ))}
         </StaggerContainer>
       </div>
     </section>

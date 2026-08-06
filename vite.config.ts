@@ -19,4 +19,10 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Static prerendering (SSG) — build both language routes to static HTML.
+  ssgOptions: {
+    script: "async",
+    formatting: "minify",
+    includedRoutes: () => ["/", "/it"],
+  },
 }));

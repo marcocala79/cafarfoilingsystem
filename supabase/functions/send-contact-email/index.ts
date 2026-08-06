@@ -40,7 +40,7 @@ serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "CAFAR Contact Form <onboarding@resend.dev>",
+        from: "CAFAR Contact Form <noreply@cafarfoilingsystem.com>",
         to: ["contact@cafarfoilingsystem.com"],
         subject: `New contact from ${name}`,
         html: `

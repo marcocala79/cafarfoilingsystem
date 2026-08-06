@@ -2,41 +2,28 @@ import cafarElements from "@/assets/cafar-elements.jpg";
 import cafarConditions from "@/assets/cafar-conditions.jpg";
 import cafarFlymode from "@/assets/cafar-flymode.jpg";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export const ComeFunziona = () => {
-  const steps = [
-    {
-      number: "01",
-      title: "Two Main Components",
-      description: "The CAFAR system is based on two components: the canting arm and the symmetric canting T-foil. This combination delivers superior performance.",
-      image: cafarElements,
-    },
-    {
-      number: "02",
-      title: "Operating Conditions",
-      description: "The system automatically adapts to wind conditions: light wind sailing, downwind, upwind. The arm extends laterally to maximize the righting moment.",
-      image: cafarConditions,
-    },
-    {
-      number: "03",
-      title: "Flight and Sail Modes",
-      description: "The transition between FLIGHT mode (foiling) and SAIL mode (traditional sailing) occurs smoothly during tacks, ensuring stability and performance in every situation.",
-      image: cafarFlymode,
-    },
-  ];
+  const { t } = useI18n();
+  const images = [cafarElements, cafarConditions, cafarFlymode];
+  const steps = t.how.steps.map((s, i) => ({
+    ...s,
+    number: `0${i + 1}`,
+    image: images[i],
+  }));
 
   return (
     <section id="how-it-works" className="py-20 bg-background/35 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-accent font-medium mb-2">How It Works</p>
+            <p className="text-accent font-medium mb-2">{t.how.eyebrow}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Technology in Action
+              {t.how.heading}
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              Discover how the CAFAR system transforms sailing, 
-              combining advanced engineering and intelligent design.
+              {t.how.intro}
             </p>
           </div>
         </ScrollReveal>

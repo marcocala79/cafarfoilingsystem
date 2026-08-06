@@ -2,44 +2,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Wrench, Shield, Award } from "lucide-react";
 import cafarBoat from "@/assets/cafar-boat.png";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Progetto = () => {
-  const features = [
-    {
-      icon: TrendingUp,
-      title: "Greater Righting Moment",
-      description: "Increases the foil arm without modifying the maximum hull width.",
-    },
-    {
-      icon: Wrench,
-      title: "Affordable Production",
-      description: "Significantly lower manufacturing costs compared to traditional foiling systems, making high performance accessible.",
-    },
-    {
-      icon: Shield,
-      title: "Maximum Safety",
-      description: "No holes in the hull and greater safety in case of collision.",
-    },
-    {
-      icon: Award,
-      title: "Patented Design",
-      description: "Innovative technology protected by international patent.",
-    },
-  ];
+  const { t } = useI18n();
+  const icons = [TrendingUp, Wrench, Shield, Award];
+  const features = t.project.features.map((f, i) => ({ ...f, icon: icons[i] }));
 
   return (
     <section id="project" className="py-20 bg-background/40 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-accent font-medium mb-2">The Project</p>
+            <p className="text-accent font-medium mb-2">{t.project.eyebrow}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Innovation in Foiling
+              {t.project.heading}
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              CAFAR is a revolutionary system that allows a monofoil to increase 
-              the foil lever arm through an articulated canting arm, 
-              delivering superior performance while maintaining construction simplicity.
+              {t.project.intro}
             </p>
           </div>
         </ScrollReveal>
@@ -47,9 +27,9 @@ export const Progetto = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left">
             <div className="relative">
-              <img 
-                src={cafarBoat} 
-                alt="CAFAR System - 3D View" 
+              <img
+                src={cafarBoat}
+                alt={t.project.imgAlt}
                 className="w-full"
               />
             </div>
