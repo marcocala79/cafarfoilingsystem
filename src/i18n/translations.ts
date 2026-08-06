@@ -455,7 +455,7 @@ export const translations: Record<Lang, Dict> = {
       project: "The Project",
       how: "How It Works",
       apps: "Applications",
-      rights: "© 2024 CAFAR Technology. All rights reserved.",
+      rights: "© 2026 CAFAR Technology. All rights reserved.",
     },
   },
   it: {
@@ -865,7 +865,7 @@ export const translations: Record<Lang, Dict> = {
       project: "Il Progetto",
       how: "Come Funziona",
       apps: "Applicazioni",
-      rights: "© 2024 CAFAR Technology. Tutti i diritti riservati.",
+      rights: "© 2026 CAFAR Technology. Tutti i diritti riservati.",
     },
   },
 };
