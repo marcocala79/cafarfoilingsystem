@@ -25,6 +25,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 
+    <!-- Google Analytics 4 with Consent Mode v2.
+         Every consent type defaults to "denied" BEFORE gtag.js loads, so no
+         analytics or advertising storage is written until the visitor accepts
+         in the cookie banner. Until then GA only receives cookieless pings.
+         Advertising consent is never granted: the site runs no ad tags. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+
+      // Returning visitor who already accepted: restore the grant before the
+      // first hit, so the page view is measured instead of only pinged.
+      try {
+        if (window.localStorage.getItem('cafar-cookie-consent') === 'accepted') {
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+      } catch (e) { /* storage blocked — stay denied */ }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE82YRPQFP"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-VE82YRPQFP');
+    </script>
+
     <!-- Privacy-friendly, cookieless analytics (no cookie banner required).
          Data only records once the domain is added in a Plausible account. -->
     <script defer data-domain="cafarfoilingsystem.com" src="https://plausible.io/js/script.js"></script>

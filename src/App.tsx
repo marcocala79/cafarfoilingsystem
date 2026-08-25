@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
+import { CookieBanner } from "@/components/CookieBanner";
 import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
@@ -20,6 +21,7 @@ const RootLayout = () => (
         <Sonner />
         <LanguageProvider>
           <Outlet />
+          <CookieBanner />
         </LanguageProvider>
       </TooltipProvider>
     </ThemeProvider>

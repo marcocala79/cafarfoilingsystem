@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useI18n } from "@/i18n/LanguageProvider";
+import { openCookiePreferences } from "@/lib/consent";
 
 export const Footer = () => {
   const { t, lang } = useI18n();
@@ -53,6 +54,10 @@ export const Footer = () => {
           <Link to={privacyPath} className="hover:text-background transition-colors">
             {t.contact.form.consentLink}
           </Link>
+          <span className="hidden sm:inline">·</span>
+          <button onClick={openCookiePreferences} className="hover:text-background transition-colors">
+            Cookie preferences
+          </button>
         </div>
       </div>
     </footer>
