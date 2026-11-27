@@ -851,6 +851,9 @@ const TYV=["stampa","skipper","cantiere","progettista","organizzazione","appassi
 const lsGet=k=>{try{return localStorage.getItem(k)}catch(e){return null}};
 const lsSet=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
 let gUnlocked=!!lsGet("cafar_sim_unlock_v1"),gUsed=+(lsGet("cafar_sim_trial_s")||0),GOPEN=false,gExpired=false;
+let gPending=0; const GATE_API=SUPA_URL+"/functions/v1/sim-gate";
+// Limite di tempo autorevole lato server: l'uso e tracciato per IP nel DB, cosi incognito / "cancella dati" / altro browser sulla stessa rete non lo resettano.
+async function gSync(active,unlock){try{const r=await fetch(GATE_API,{method:"POST",keepalive:true,headers:{"Content-Type":"application/json",apikey:SUPA_ANON,Authorization:"Bearer "+SUPA_ANON},body:JSON.stringify({active:Math.max(0,Math.round(active||0)),unlock:!!unlock})});if(!r.ok)return null;const j=await r.json();return(j&&typeof j.remaining==="number")?j:null}catch(e){return null}}
 function gfmt(s){s=Math.max(0,Math.ceil(s));return Math.floor(s/60)+":"+String(s%60).padStart(2,"0")}
 function gLockUI(){const side=document.querySelector(".side");let lock=false;
  for(const el of [...side.children]){if(el.tagName==="IMG")continue;
@@ -900,7 +903,7 @@ async function gSubmit(){const v=id=>document.getElementById(id).value.trim();
    if(!r.ok)throw new Error("HTTP "+r.status)}
   go.textContent=GT.ok;setTimeout(gUnlockNow,750)
  }catch(e){go.disabled=false;er.textContent=GT.ern;er.style.display="block"}}
-function gUnlockNow(){gUnlocked=true;lsSet("cafar_sim_unlock_v1",String(Date.now()));
+function gUnlockNow(){gUnlocked=true;lsSet("cafar_sim_unlock_v1",String(Date.now()));gSync(0,true);
  document.body.classList.remove("trial");gHide();const ch=document.getElementById("chip");if(ch)ch.remove();
  if(env.paused&&!env.capsize){env.paused=false;$("bp").textContent="Pause"}}
 // deterrenti leggeri anti-copia
@@ -910,9 +913,14 @@ addEventListener("keydown",e=>{const t=e.target.tagName;
  if(GOPEN&&gExpired&&!gUnlocked&&!/INPUT|TEXTAREA|SELECT/.test(t)){e.stopPropagation()}},true);
 // avvio
 if(!gUnlocked){document.body.classList.add("trial");gLockUI();gChip();
+ // Il server possiede il totale reale per questo IP; lo storage locale e solo fallback.
+ gSync(0,false).then(s=>{if(gUnlocked)return;if(s){gUsed=s.used;if(s.unlocked){gUnlockNow();return}}if(gUsed>=GATE_LIMIT)gExpire();const t0=document.getElementById("chipT");if(t0)t0.textContent=gfmt(GATE_LIMIT-gUsed)});
  if(gUsed>=GATE_LIMIT)gExpire();
  setInterval(()=>{if(gUnlocked)return;
-  if(!document.hidden&&!GOPEN){gUsed+=1;lsSet("cafar_sim_trial_s",String(gUsed))}
-  const t=document.getElementById("chipT");if(t)t.textContent=gfmt(GATE_LIMIT-gUsed);
-  if(gUsed>=GATE_LIMIT)gExpire()},1000)}
+  if(!document.hidden&&!GOPEN){gPending+=1;lsSet("cafar_sim_trial_s",String(gUsed+gPending))}
+  const shown=gUsed+gPending;const t=document.getElementById("chipT");if(t)t.textContent=gfmt(GATE_LIMIT-shown);
+  if(shown>=GATE_LIMIT)gExpire()},1000);
+ // Ogni pochi secondi riconcilia col server, che corregge qualsiasi reset locale.
+ setInterval(async()=>{if(gUnlocked||GOPEN)return;const add=gPending;gPending=0;const r=await gSync(add,false);if(!r){gUsed+=add;return}gUsed=r.used;if(r.unlocked){gUnlockNow();return}if(r.remaining<=0)gExpire()},5000);
+ addEventListener("visibilitychange",()=>{if(document.hidden&&!gUnlocked&&gPending>0){gSync(gPending,false);gPending=0}})}
 </script></body></html>

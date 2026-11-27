@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useI18n } from "@/i18n/LanguageProvider";
+import cafarMark from "@/assets/cafar-mark.png";
 
 export const Navbar = () => {
   const { t, lang, otherLang, otherPath, homePath } = useI18n();
@@ -67,9 +68,18 @@ export const Navbar = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="flex flex-col items-start leading-none hover:opacity-80 transition-opacity"
+            aria-label="CAFAR"
           >
             <span className="text-2xl font-bold tracking-[0.25em] text-primary-foreground" style={{ fontFamily: "'Orbitron', sans-serif" }}>CAFAR</span>
+            <img
+              src={cafarMark}
+              alt=""
+              aria-hidden="true"
+              width={149}
+              height={119}
+              className="mt-1 h-4 w-auto"
+            />
           </button>
 
           {/* Desktop Navigation */}

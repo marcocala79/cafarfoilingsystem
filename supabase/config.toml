@@ -9,3 +9,9 @@ verify_jwt = false
 # Invoked by the pg_net trigger on contact_submissions, which cannot present a
 # user JWT. The function authorises the request by claiming the row instead.
 verify_jwt = false
+
+[functions.sim-gate]
+# Called from the simulator iframe with only the public anon key, so it cannot
+# present a user JWT. It never trusts the caller: the time budget it returns is
+# computed server-side and written with the service role.
+verify_jwt = false
