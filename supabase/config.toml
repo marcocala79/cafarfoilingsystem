@@ -1,1 +1,6 @@
 project_id = "bgnlfocswcaghbdopzys"
+
+[functions.notify-simulator-lead]
+# Invoked by the pg_net trigger on simulator_leads, which cannot present a user
+# JWT. The function authorises the request by claiming the lead row instead.
+verify_jwt = false
