@@ -54,19 +54,14 @@ export const Contatti = () => {
         message: formData.message.trim(),
       };
 
+      // Storing the row is all the browser has to do: a trigger on
+      // contact_submissions has the server send the notification email, so the
+      // send cannot be skipped from here and a failure is not silent.
       const { error } = await supabase
         .from("contact_submissions")
         .insert(trimmedData);
 
       if (error) throw error;
-
-      const { error: emailError } = await supabase.functions.invoke("send-contact-email", {
-        body: trimmedData,
-      });
-
-      if (emailError) {
-        console.error("Email sending failed:", emailError);
-      }
 
       toast({
         title: t.contact.form.successTitle,

@@ -4,3 +4,8 @@ project_id = "bgnlfocswcaghbdopzys"
 # Invoked by the pg_net trigger on simulator_leads, which cannot present a user
 # JWT. The function authorises the request by claiming the lead row instead.
 verify_jwt = false
+
+[functions.send-contact-email]
+# Invoked by the pg_net trigger on contact_submissions, which cannot present a
+# user JWT. The function authorises the request by claiming the row instead.
+verify_jwt = false
