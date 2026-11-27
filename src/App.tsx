@@ -10,6 +10,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Simulator from "./pages/Simulator";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,8 @@ export const routes: RouteRecord[] = [
       { path: "it/privacy", element: <PrivacyPolicy /> },
       { path: "simulator", element: <Simulator /> },
       { path: "it/simulatore", element: <Simulator /> },
+      // Private: access is enforced by the database, not by the route.
+      { path: "admin", element: <Admin /> },
       // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
       { path: "*", element: <NotFound /> },
     ],

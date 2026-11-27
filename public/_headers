@@ -7,3 +7,9 @@
   Content-Security-Policy: frame-ancestors 'self' https://cafarfoilingsystem.com https://www.cafarfoilingsystem.com
   X-Robots-Tag: noindex
   Cache-Control: no-store
+
+# The contacts page is private: keep it out of every index and cache, whatever
+# a crawler makes of robots.txt.
+/admin
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store

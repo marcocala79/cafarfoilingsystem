@@ -47,6 +47,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         <html lang={lang} />
         <title>{t.meta.title}</title>
         <meta name="description" content={t.meta.description} />
+        {/* Declared here, not in index.html, so a private page such as
+            /admin can replace it with noindex instead of adding a second,
+            contradictory robots tag. */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={canonical} />
         <link rel="alternate" hrefLang="en" href={enHref} />
         <link rel="alternate" hrefLang="it" href={itHref} />

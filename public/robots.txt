@@ -2,15 +2,19 @@ User-agent: *
 Allow: /
 # The simulator is embedded in /simulator and /it/simulatore — don't crawl the raw file.
 Disallow: /sim/
+# Private contacts page - nothing for crawlers here.
+Disallow: /admin
 
 # Explicitly welcome major search and social crawlers
 User-agent: Googlebot
 Allow: /
 Disallow: /sim/
+Disallow: /admin
 
 User-agent: Bingbot
 Allow: /
 Disallow: /sim/
+Disallow: /admin
 
 User-agent: Twitterbot
 Allow: /

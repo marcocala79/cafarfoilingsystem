@@ -23,6 +23,11 @@ export default defineConfig(({ mode }) => ({
   ssgOptions: {
     script: "async",
     formatting: "minify",
-    includedRoutes: () => ["/", "/it", "/privacy", "/it/privacy", "/simulator", "/it/simulatore"],
+    includedRoutes: () => [
+      "/", "/it", "/privacy", "/it/privacy", "/simulator", "/it/simulatore",
+      // Prerendered only so /admin is served as its own page instead of
+      // falling back to the home page HTML. Its content is the login form.
+      "/admin",
+    ],
   },
 }));
