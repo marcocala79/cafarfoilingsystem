@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { SideNav } from "@/components/SideNav";
 import { Hero } from "@/components/Hero";
@@ -15,6 +17,17 @@ import { Footer } from "@/components/Footer";
 import oceanBg from "@/assets/hero-ocean-tech.webp";
 
 const Index = () => {
+  const { hash } = useLocation();
+
+  // Arriving as /#contact (e.g. from the simulator page): scroll to that section once mounted.
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.slice(1);
+    const scroll = () => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const raf = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(raf);
+  }, [hash]);
+
   return (
     <div className="min-h-screen relative">
       {/* Fixed ocean background for all sections */}

@@ -2,7 +2,7 @@ export type Lang = "en" | "it";
 
 export interface Dict {
   meta: { title: string; description: string };
-  nav: { project: string; howItWorks: string; applications: string; patent: string; partner: string; contact: string };
+  nav: { project: string; howItWorks: string; applications: string; patent: string; partner: string; simulator: string; contact: string };
   side: { home: string; project: string; howItWorks: string; physics: string; vpp: string; applications: string; patent: string; inventors: string; partner: string; contact: string };
   hero: { patent: string; tagline: string; ctaDiscover: string; ctaCollaborate: string; imgAlt: string };
   project: {
@@ -49,7 +49,13 @@ export interface Dict {
       successTitle: string; successMsg: string; errTitle: string; errMsg: string;
     };
   };
-  footer: { tagline: string; navHeading: string; project: string; how: string; apps: string; rights: string };
+  sim: {
+    meta: { title: string; description: string };
+    eyebrow: string; heading: string; subtitle: string; iframeTitle: string; hint: string;
+    cards: { title: string; description: string }[];
+    vppTitle: string; vppText: string; vppCta: string;
+  };
+  footer: { tagline: string; navHeading: string; project: string; how: string; apps: string; simulator: string; rights: string };
 }
 
 export const translations: Record<Lang, Dict> = {
@@ -65,6 +71,7 @@ export const translations: Record<Lang, Dict> = {
       applications: "Applications",
       patent: "Patent",
       partner: "Partner",
+      simulator: "Simulator",
       contact: "Contact Us",
     },
     side: {
@@ -477,6 +484,40 @@ export const translations: Record<Lang, Dict> = {
         errMsg: "Failed to send message. Please try again.",
       },
     },
+    sim: {
+      meta: {
+        title: "CAFAR Simulator — Foiling Sailing Simulator | Mini 6.50",
+        description:
+          "Free online foiling simulator: fly a Mini 6.50 on the patented CAFAR canting foil arm. Real-time physics, wind, trim and foil geometry — 3 minutes free.",
+      },
+      eyebrow: "Real-time physics",
+      heading: "CAFAR Simulator",
+      subtitle:
+        "Fly a Mini 6.50 on a single canting foil arm. Real-time physics, three minutes free, then you unlock every control.",
+      iframeTitle: "CAFAR Simulator",
+      hint: "Best on desktop. The simulator runs entirely in your browser — nothing to install.",
+      cards: [
+        {
+          title: "In the free demo",
+          description:
+            "Play with the breeze: true wind speed and direction, apparent angle, trim response and the camera views. Watch the hull lift as the canting foil arm takes the load.",
+        },
+        {
+          title: "What your email unlocks",
+          description:
+            "The full cockpit: sail plan, weights and ballast, appendages, CAFAR foil geometry, autopilots, polars and the foil optimiser.",
+        },
+        {
+          title: "The complete VPP",
+          description:
+            "This demo runs on a Mini 6.50 model. The full VPP can be set up on any hull — we run it as part of our design work.",
+        },
+      ],
+      vppTitle: "Want it on your own boat?",
+      vppText:
+        "We can run the complete VPP on your polars and your hull sections, with the CAFAR foil sized for your project. Tell us about the boat and we'll take it from there.",
+      vppCta: "Talk to us",
+    },
     footer: {
       tagline:
         "Canting Foil Arm — patented marine technology for higher foiling performance, righting moment and stability in sailing and racing.",
@@ -484,6 +525,7 @@ export const translations: Record<Lang, Dict> = {
       project: "The Project",
       how: "How It Works",
       apps: "Applications",
+      simulator: "Simulator",
       rights: "© 2026 CAFAR Technology. All rights reserved.",
     },
   },
@@ -499,6 +541,7 @@ export const translations: Record<Lang, Dict> = {
       applications: "Applicazioni",
       patent: "Brevetto",
       partner: "Partner",
+      simulator: "Simulatore",
       contact: "Contattaci",
     },
     side: {
@@ -911,6 +954,40 @@ export const translations: Record<Lang, Dict> = {
         errMsg: "Invio del messaggio non riuscito. Riprova.",
       },
     },
+    sim: {
+      meta: {
+        title: "Simulatore CAFAR — Simulatore di vela foiling | Mini 6.50",
+        description:
+          "Simulatore di vela foiling online e gratuito: porta in volo un Mini 6.50 con il braccio di foil CAFAR brevettato. Fisica in tempo reale, vento, trim e geometria del foil — 3 minuti gratis.",
+      },
+      eyebrow: "Fisica in tempo reale",
+      heading: "Simulatore CAFAR",
+      subtitle:
+        "Porta un Mini 6.50 in volo con un solo braccio di foil. Fisica in tempo reale, 3 minuti gratis, poi sblocchi tutti i controlli.",
+      iframeTitle: "Simulatore CAFAR",
+      hint: "Meglio da desktop. Il simulatore gira interamente nel browser — niente da installare.",
+      cards: [
+        {
+          title: "Nella demo gratuita",
+          description:
+            "Gioca col vento: intensità e direzione del vento reale, angolo apparente, risposta al trim e le viste della camera. Guarda lo scafo salire mentre il braccio di foil prende il carico.",
+        },
+        {
+          title: "Cosa sblocchi con l'email",
+          description:
+            "Tutto il pozzetto: piano velico, pesi e zavorra, appendici, geometria del foil CAFAR, autopiloti, polari e ottimizzatore del foil.",
+        },
+        {
+          title: "Il VPP completo",
+          description:
+            "Questa demo gira su un modello di Mini 6.50. Il VPP completo può essere tarato su qualsiasi carena: lo usiamo come parte del nostro lavoro di progettazione.",
+        },
+      ],
+      vppTitle: "Lo vuoi sulla tua barca?",
+      vppText:
+        "Possiamo far girare il VPP completo sulle tue polari e sulle sezioni della tua carena, con il foil CAFAR dimensionato sul tuo progetto. Raccontaci la barca e ci pensiamo noi.",
+      vppCta: "Scrivici",
+    },
     footer: {
       tagline:
         "Canting Foil Arm — tecnologia nautica brevettata per prestazioni in foiling, momento raddrizzante e stabilità superiori nella vela e nelle regate.",
@@ -918,6 +995,7 @@ export const translations: Record<Lang, Dict> = {
       project: "Il Progetto",
       how: "Come Funziona",
       apps: "Applicazioni",
+      simulator: "Simulatore",
       rights: "© 2026 CAFAR Technology. Tutti i diritti riservati.",
     },
   },

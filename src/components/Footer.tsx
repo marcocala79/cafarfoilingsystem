@@ -1,12 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useI18n } from "@/i18n/LanguageProvider";
 import { openCookiePreferences } from "@/lib/consent";
 
 export const Footer = () => {
-  const { t, lang } = useI18n();
+  const { t, lang, homePath } = useI18n();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   const privacyPath = lang === "it" ? "/it/privacy" : "/privacy";
+  const simulatorPath = lang === "it" ? "/it/simulatore" : "/simulator";
+  const isHome = pathname === "/" || pathname === "/it" || pathname === "/it/";
 
+  // The sections live on the home page: from any other route we navigate there with a hash.
   const scrollToSection = (sectionId: string) => {
+    if (!isHome) {
+      navigate(`${homePath}#${sectionId}`);
+      return;
+    }
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -42,6 +51,11 @@ export const Footer = () => {
                 <button onClick={() => scrollToSection('applications')} className="hover:text-background transition-colors">
                   {t.footer.apps}
                 </button>
+              </li>
+              <li>
+                <Link to={simulatorPath} className="hover:text-background transition-colors">
+                  {t.footer.simulator}
+                </Link>
               </li>
             </ul>
           </div>

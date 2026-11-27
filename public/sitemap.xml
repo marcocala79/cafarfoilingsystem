@@ -18,6 +18,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cafarfoilingsystem.com/" />
   </url>
   <url>
+    <loc>https://cafarfoilingsystem.com/simulator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cafarfoilingsystem.com/simulator" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cafarfoilingsystem.com/it/simulatore" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cafarfoilingsystem.com/simulator" />
+  </url>
+  <url>
+    <loc>https://cafarfoilingsystem.com/it/simulatore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cafarfoilingsystem.com/simulator" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cafarfoilingsystem.com/it/simulatore" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cafarfoilingsystem.com/simulator" />
+  </url>
+  <url>
     <loc>https://cafarfoilingsystem.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

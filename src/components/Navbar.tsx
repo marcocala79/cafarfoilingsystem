@@ -1,14 +1,19 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useI18n } from "@/i18n/LanguageProvider";
 
 export const Navbar = () => {
-  const { t, lang, otherLang, otherPath } = useI18n();
+  const { t, lang, otherLang, otherPath, homePath } = useI18n();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // The sections live on the home page: from any other route we navigate there with a hash.
+  const isHome = pathname === "/" || pathname === "/it" || pathname === "/it/";
+  const simulatorPath = lang === "it" ? "/it/simulatore" : "/simulator";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,9 +24,13 @@ export const Navbar = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    setIsMobileMenuOpen(false);
+    if (!isHome) {
+      navigate(`${homePath}#${sectionId}`);
+      return;
+    }
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
-    setIsMobileMenuOpen(false);
   };
 
   const navItems = [
@@ -74,6 +83,12 @@ export const Navbar = () => {
                 {item.label}
               </button>
             ))}
+            <Link
+              to={simulatorPath}
+              className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm font-medium"
+            >
+              {t.nav.simulator}
+            </Link>
           </div>
 
           {/* CTA Button & Theme Toggle */}
@@ -119,6 +134,13 @@ export const Navbar = () => {
                 {item.label}
               </button>
             ))}
+            <Link
+              to={simulatorPath}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block w-full text-left px-4 py-3 text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
+            >
+              {t.nav.simulator}
+            </Link>
             <div className="px-4 pt-4">
               <Button
                 variant="outline"

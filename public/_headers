@@ -1,0 +1,9 @@
+# Netlify response headers.
+#
+# The simulator is served as a standalone HTML file inside the site and is only
+# meant to be embedded by cafarfoilingsystem.com itself: it must not be
+# framed elsewhere, indexed as a page of its own, or kept in any cache.
+/sim/*
+  Content-Security-Policy: frame-ancestors 'self' https://cafarfoilingsystem.com https://www.cafarfoilingsystem.com
+  X-Robots-Tag: noindex
+  Cache-Control: no-store
