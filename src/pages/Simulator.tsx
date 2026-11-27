@@ -3,6 +3,7 @@ import { Head } from "vite-react-ssg";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/i18n/LanguageProvider";
 import oceanBg from "@/assets/hero-ocean-tech.webp";
@@ -57,6 +58,13 @@ const Simulator = () => {
           {/* The simulator itself */}
           <section className="pb-6 bg-background/35 backdrop-blur-sm">
             <div className="max-w-6xl mx-auto px-6">
+              {/* Phones only: the simulator works, but its layout really wants a
+                  wide screen — say so before they judge it on a 375px column. */}
+              <div className="sm:hidden flex items-start gap-3 rounded-lg border border-border bg-card p-4 mb-4">
+                <Monitor className="h-5 w-5 shrink-0 text-accent mt-0.5" />
+                <p className="text-sm leading-relaxed text-muted-foreground">{c.mobileNotice}</p>
+              </div>
+
               <div className="bg-card rounded-xl shadow-elegant p-2 sm:p-3">
                 <iframe
                   src={simSrc}

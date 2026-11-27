@@ -110,6 +110,9 @@ export const Hero = () => {
                 <span className="text-sm text-primary-foreground/80 max-w-md drop-shadow">
                   {t.hero.simHint}
                 </span>
+                <span className="sm:hidden mt-1 pt-3 border-t border-primary-foreground/20 text-xs leading-relaxed text-primary-foreground/70 max-w-xs drop-shadow">
+                  {t.sim.mobileNotice}
+                </span>
               </div>
             </button>
           )}

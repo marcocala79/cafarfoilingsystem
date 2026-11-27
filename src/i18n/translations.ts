@@ -52,6 +52,7 @@ export interface Dict {
   sim: {
     meta: { title: string; description: string };
     eyebrow: string; heading: string; subtitle: string; iframeTitle: string; hint: string;
+    mobileNotice: string;
     cards: { title: string; description: string }[];
     vppTitle: string; vppText: string; vppCta: string;
   };
@@ -515,6 +516,8 @@ export const translations: Record<Lang, Dict> = {
             "This demo runs on a Mini 6.50 model. The full VPP can be set up on any hull — we run it as part of our design work.",
         },
       ],
+      mobileNotice:
+        "This is not a game but a realistic simulator: for the best experience we recommend using it from a desktop browser.",
       vppTitle: "Want it on your own boat?",
       vppText:
         "We can run the complete VPP on your polars and your hull sections, with the CAFAR foil sized for your project.",
@@ -987,6 +990,8 @@ export const translations: Record<Lang, Dict> = {
             "Questa demo gira su un modello di Mini 6.50. Il VPP completo può essere tarato su qualsiasi carena: lo usiamo come parte del nostro lavoro di progettazione.",
         },
       ],
+      mobileNotice:
+        "Questo non è un gioco ma un simulatore realistico: per un utilizzo ottimale ti consigliamo di usarlo dal browser di un computer.",
       vppTitle: "Lo vuoi sulla tua barca?",
       vppText:
         "Possiamo far girare il VPP completo sulle tue polari e sulle sezioni della tua carena, con il foil CAFAR dimensionato sul tuo progetto.",
