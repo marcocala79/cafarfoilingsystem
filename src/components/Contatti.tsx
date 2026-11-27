@@ -118,8 +118,6 @@ export const Contatti = () => {
               <div className="mt-12 p-6 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10">
                 <p className="text-primary-foreground/80">
                   <span className="font-semibold text-primary-foreground">{t.contact.patentLabel}</span>
-                  <br />
-                  No. 102021000023279
                 </p>
               </div>
             </div>

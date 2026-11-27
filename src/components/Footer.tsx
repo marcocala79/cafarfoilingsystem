@@ -30,7 +30,7 @@ export const Footer = () => {
               {t.footer.tagline}
             </p>
             <p className="text-background/50 text-sm">
-              Patent No. 102021000023279
+              {t.hero.patent}
             </p>
           </div>
 

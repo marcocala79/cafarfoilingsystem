@@ -88,7 +88,7 @@ export const translations: Record<Lang, Dict> = {
       contact: "Contact",
     },
     hero: {
-      patent: "Patent No. 102021000023279",
+      patent: "Patented",
       tagline:
         "The patented hydrofoil system revolutionizing foiling — increasing righting moment for sail racing without modifying hull width.",
       ctaDiscover: "Discover the Project",
@@ -207,7 +207,7 @@ export const translations: Record<Lang, Dict> = {
       heading: "Patent claim map",
       intro:
         "CAFAR is not just \"a foil\" — it's a platform of mobile hydrodynamic architectures for foiling yachts, protected claim by claim.",
-      sub: "Patent application IT 102021000023279 — \"Sailing vessel with auxiliary hydrodynamic surface\"",
+      sub: "Patented — \"Sailing vessel with auxiliary hydrodynamic surface\"",
       techValueLabel: "Technical value",
       applicationsLabel: "Applications",
       strategicTitle: "Strategic reading",
@@ -466,7 +466,7 @@ export const translations: Record<Lang, Dict> = {
         "Interested in exploring the possibilities of the CAFAR hydrofoil system? Contact us to discuss collaboration and licensing opportunities in sailing and yacht racing.",
       infoTitle: "Contact Information",
       infoText: "Fill out the form and we'll get back to you at the email you provide.",
-      patentLabel: "Patent",
+      patentLabel: "Patented",
       form: {
         name: "Name",
         email: "Email",
@@ -562,7 +562,7 @@ export const translations: Record<Lang, Dict> = {
       contact: "Contatti",
     },
     hero: {
-      patent: "Brevetto N. 102021000023279",
+      patent: "Brevettato",
       tagline:
         "Il sistema a foil brevettato che rivoluziona il foiling nella vela, aumentando il momento raddrizzante senza modificare la larghezza dello scafo.",
       ctaDiscover: "Scopri il Progetto",
@@ -681,7 +681,7 @@ export const translations: Record<Lang, Dict> = {
       heading: "Mappa delle rivendicazioni del brevetto",
       intro:
         "CAFAR non è semplicemente \"un foil\": è una piattaforma di architetture idrodinamiche mobili per yacht in foiling, protetta rivendicazione dopo rivendicazione.",
-      sub: "Domanda di brevetto IT 102021000023279 — \"Imbarcazione a vela con superficie idrodinamica ausiliaria\"",
+      sub: "Brevettato — \"Imbarcazione a vela con superficie idrodinamica ausiliaria\"",
       techValueLabel: "Valore tecnico",
       applicationsLabel: "Applicazioni",
       strategicTitle: "Lettura strategica",
@@ -940,7 +940,7 @@ export const translations: Record<Lang, Dict> = {
         "Interessato a esplorare le possibilità del sistema a foil CAFAR? Contattaci per discutere opportunità di collaborazione e licensing nella vela e nelle regate.",
       infoTitle: "Informazioni di Contatto",
       infoText: "Compila il modulo e ti risponderemo all'indirizzo email che ci fornirai.",
-      patentLabel: "Brevetto",
+      patentLabel: "Brevettato",
       form: {
         name: "Nome",
         email: "Email",

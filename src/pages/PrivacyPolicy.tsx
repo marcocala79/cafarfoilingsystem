@@ -24,7 +24,7 @@ const CONTENT: Record<"en" | "it", Content> = {
       {
         heading: "1. Data Controller",
         body: [
-          "The data controller for personal data collected through this website (cafarfoilingsystem.com) is the CAFAR team — Francesco Belvisi and Marco Calatroni, co-holders of patent IT 102021000023279.",
+          "The data controller for personal data collected through this website (cafarfoilingsystem.com) is the CAFAR team — Francesco Belvisi and Marco Calatroni, co-holders of the CAFAR patent.",
           "For any request regarding your personal data you can write to contact@cafarfoilingsystem.com.",
         ],
       },
@@ -92,7 +92,7 @@ const CONTENT: Record<"en" | "it", Content> = {
       {
         heading: "1. Titolare del trattamento",
         body: [
-          "Il titolare del trattamento dei dati personali raccolti tramite questo sito (cafarfoilingsystem.com) è il team CAFAR — Francesco Belvisi e Marco Calatroni, co-titolari del brevetto IT 102021000023279.",
+          "Il titolare del trattamento dei dati personali raccolti tramite questo sito (cafarfoilingsystem.com) è il team CAFAR — Francesco Belvisi e Marco Calatroni, co-titolari del brevetto CAFAR.",
           "Per qualsiasi richiesta relativa ai tuoi dati personali puoi scrivere a contact@cafarfoilingsystem.com.",
         ],
       },
