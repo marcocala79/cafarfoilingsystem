@@ -515,7 +515,7 @@ export const translations: Record<Lang, Dict> = {
       ],
       vppTitle: "Want it on your own boat?",
       vppText:
-        "We can run the complete VPP on your polars and your hull sections, with the CAFAR foil sized for your project. Tell us about the boat and we'll take it from there.",
+        "We can run the complete VPP on your polars and your hull sections, with the CAFAR foil sized for your project.",
       vppCta: "Talk to us",
     },
     footer: {
@@ -985,7 +985,7 @@ export const translations: Record<Lang, Dict> = {
       ],
       vppTitle: "Lo vuoi sulla tua barca?",
       vppText:
-        "Possiamo far girare il VPP completo sulle tue polari e sulle sezioni della tua carena, con il foil CAFAR dimensionato sul tuo progetto. Raccontaci la barca e ci pensiamo noi.",
+        "Possiamo far girare il VPP completo sulle tue polari e sulle sezioni della tua carena, con il foil CAFAR dimensionato sul tuo progetto.",
       vppCta: "Scrivici",
     },
     footer: {
