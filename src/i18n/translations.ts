@@ -83,7 +83,7 @@ export const translations: Record<Lang, Dict> = {
       vpp: "VPP",
       applications: "Applications",
       patent: "Patent",
-      inventors: "Inventors",
+      inventors: "Team",
       partner: "Partner",
       contact: "Contact",
     },
@@ -414,7 +414,7 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     inventors: {
-      eyebrow: "The Inventors",
+      eyebrow: "The Team",
       heading: "The Minds Behind CAFAR",
       intro:
         "A project born from a passion for sailing and the drive to bring real innovation to foiling.",
@@ -557,7 +557,7 @@ export const translations: Record<Lang, Dict> = {
       vpp: "VPP",
       applications: "Applicazioni",
       patent: "Brevetto",
-      inventors: "Inventori",
+      inventors: "Team",
       partner: "Partner",
       contact: "Contatti",
     },
@@ -888,7 +888,7 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     inventors: {
-      eyebrow: "Gli Inventori",
+      eyebrow: "Il Team",
       heading: "Le Menti dietro CAFAR",
       intro:
         "Un progetto nato dalla passione per la vela e dalla voglia di portare vera innovazione nel foiling.",
