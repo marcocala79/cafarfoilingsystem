@@ -112,12 +112,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Parallax container */
-#hero {
-  transform-style: preserve-3d;
-  perspective: 1px;
-}
-
 /* Sections with ocean background showing through */
 section {
   position: relative;

@@ -4,7 +4,7 @@ export interface Dict {
   meta: { title: string; description: string };
   nav: { project: string; howItWorks: string; applications: string; patent: string; partner: string; simulator: string; contact: string };
   side: { home: string; project: string; howItWorks: string; physics: string; vpp: string; applications: string; patent: string; inventors: string; partner: string; contact: string };
-  hero: { patent: string; tagline: string; ctaDiscover: string; ctaCollaborate: string; imgAlt: string };
+  hero: { patent: string; tagline: string; ctaDiscover: string; ctaCollaborate: string; imgAlt: string; simStart: string; simHint: string };
   project: {
     eyebrow: string; heading: string; intro: string; imgAlt: string;
     features: { title: string; description: string }[];
@@ -93,6 +93,8 @@ export const translations: Record<Lang, Dict> = {
       ctaDiscover: "Discover the Project",
       ctaCollaborate: "Collaborate With Us",
       imgAlt: "CAFAR canting foil arm hydrofoil system on a racing sailing yacht at sea",
+      simStart: "Start the simulator",
+      simHint: "Sail a CAFAR boat in your browser — 3 minutes free, no sign-up.",
     },
     project: {
       eyebrow: "The Project",
@@ -563,6 +565,8 @@ export const translations: Record<Lang, Dict> = {
       ctaDiscover: "Scopri il Progetto",
       ctaCollaborate: "Collabora con Noi",
       imgAlt: "Sistema a foil basculante CAFAR su uno yacht a vela da regata in navigazione",
+      simStart: "Avvia il simulatore",
+      simHint: "Naviga una barca CAFAR dal browser — 3 minuti gratis, senza registrarti.",
     },
     project: {
       eyebrow: "Il Progetto",
