@@ -47,7 +47,7 @@ const CONTENT: Record<"en" | "it", Content> = {
       {
         heading: "4. Who processes the data (processors)",
         body: [
-          "To operate the site and the form we rely on the following service providers, acting as data processors: Supabase (database/hosting), Resend (email delivery), Netlify (website hosting), Plausible Analytics (aggregate, cookieless statistics that do not identify you) and Google Analytics 4 (audience statistics, only after you accept analytics cookies).",
+          "To operate the site and the form we rely on the following service providers, acting as data processors: Supabase (database/hosting), Resend (email delivery), Netlify (website hosting) and Google Analytics 4 (audience statistics, only after you accept analytics cookies).",
           "Some providers may process data outside the EU; where this happens, transfers are covered by appropriate safeguards (e.g. EU Standard Contractual Clauses).",
         ],
       },
@@ -68,8 +68,7 @@ const CONTENT: Record<"en" | "it", Content> = {
       {
         heading: "7. Analytics & cookies",
         body: [
-          "This site uses Plausible Analytics, a privacy-friendly tool that measures aggregate traffic without cookies and without collecting personal data. It runs on our legitimate interest in understanding site usage and requires no consent.",
-          "We also use Google Analytics 4 (measurement ID G-VE82YRPQFP), which does set cookies. It is loaded with Google Consent Mode v2 and all consent types are set to 'denied' by default: until you accept in the cookie banner, Google receives only anonymous, cookieless pings that cannot identify you. The legal basis is your consent (Art. 6(1)(a) GDPR).",
+          "This site uses Google Analytics 4 (measurement ID G-VE82YRPQFP), which does set cookies. It is loaded with Google Consent Mode v2 and all consent types are set to 'denied' by default: until you accept in the cookie banner, Google receives only anonymous, cookieless pings that cannot identify you. The legal basis is your consent (Art. 6(1)(a) GDPR).",
           "We never grant advertising consent: ad_storage, ad_user_data and ad_personalization stay denied at all times, so no data is used for advertising, remarketing or profiling. Google may process data outside the EU under the appropriate safeguards mentioned in section 4.",
           "You can change or withdraw your choice at any time via the 'Cookie preferences' link in the footer. Your choice is stored locally in your browser and can also be cleared by deleting your site data.",
         ],
@@ -115,7 +114,7 @@ const CONTENT: Record<"en" | "it", Content> = {
       {
         heading: "4. Chi tratta i dati (responsabili)",
         body: [
-          "Per il funzionamento del sito e del modulo ci avvaliamo dei seguenti fornitori, che agiscono come responsabili del trattamento: Supabase (database/hosting), Resend (invio email), Netlify (hosting del sito), Plausible Analytics (statistiche aggregate, senza cookie, che non ti identificano) e Google Analytics 4 (statistiche di audience, solo dopo la tua accettazione dei cookie statistici).",
+          "Per il funzionamento del sito e del modulo ci avvaliamo dei seguenti fornitori, che agiscono come responsabili del trattamento: Supabase (database/hosting), Resend (invio email), Netlify (hosting del sito) e Google Analytics 4 (statistiche di audience, solo dopo la tua accettazione dei cookie statistici).",
           "Alcuni fornitori possono trattare i dati al di fuori dell'UE; in tal caso i trasferimenti sono coperti da garanzie adeguate (es. Clausole Contrattuali Standard UE).",
         ],
       },
@@ -136,8 +135,7 @@ const CONTENT: Record<"en" | "it", Content> = {
       {
         heading: "7. Statistiche e cookie",
         body: [
-          "Questo sito utilizza Plausible Analytics, uno strumento rispettoso della privacy che misura il traffico in forma aggregata senza cookie e senza raccogliere dati personali. Si basa sul legittimo interesse a comprendere l'utilizzo del sito e non richiede consenso.",
-          "Utilizziamo inoltre Google Analytics 4 (ID di misurazione G-VE82YRPQFP), che installa cookie. È caricato con Google Consent Mode v2 e tutti i tipi di consenso sono impostati su 'denied' per impostazione predefinita: finché non accetti tramite il banner, Google riceve solo ping anonimi e senza cookie, che non permettono di identificarti. La base giuridica è il tuo consenso (art. 6, par. 1, lett. a GDPR).",
+          "Questo sito utilizza Google Analytics 4 (ID di misurazione G-VE82YRPQFP), che installa cookie. È caricato con Google Consent Mode v2 e tutti i tipi di consenso sono impostati su 'denied' per impostazione predefinita: finché non accetti tramite il banner, Google riceve solo ping anonimi e senza cookie, che non permettono di identificarti. La base giuridica è il tuo consenso (art. 6, par. 1, lett. a GDPR).",
           "Non concediamo mai il consenso pubblicitario: ad_storage, ad_user_data e ad_personalization restano sempre negati, quindi nessun dato è utilizzato per pubblicità, remarketing o profilazione. Google può trattare dati fuori dall'UE con le garanzie adeguate indicate nella sezione 4.",
           "Puoi modificare o revocare la tua scelta in qualsiasi momento tramite il link 'Cookie preferences' nel footer. La scelta è memorizzata localmente nel tuo browser e può essere azzerata cancellando i dati del sito.",
         ],
